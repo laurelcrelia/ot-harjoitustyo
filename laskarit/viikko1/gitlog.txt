@@ -1,0 +1,139 @@
+commit 8787ee76bdaeae12984c08bac5be3b3d6cd7f76d
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:52:47 2022 +0200
+
+    vaihdetaan file2 nimeksi file22
+
+ tiedostoja/{file2 => file22} | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit dc32080a678df50a53069f5ea2b126b673268fc9
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:51:45 2022 +0200
+
+    file1 poisto
+
+ tiedostoja/file1 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 55ac64faeadfe8a66ea7305c00eea6357f3d529c
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:50:57 2022 +0200
+
+    file22 poistettu
+
+ tiedostoja/file22 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f36b010625762837ab04bf2b00fc9f6ab14b675e
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:50:08 2022 +0200
+
+    vahingossa lisätty file22 joka poistetaan kohta
+
+ tiedostoja/file22 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit bf2dea8622c927abd8b73a9c6c3a6a598ed0d47b
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:38:17 2022 +0200
+
+    lisättiin file1, file2 ja file3
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 5ebc83099672e3912b2249c36d000a230fb23ec0
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:23:52 2022 +0200
+
+    eka.txt ja kolmas.txt lisäyksiä ja poistoja tehty
+
+ eka.txt    | 3 +--
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+commit 869e14c95ddace414eddbf0f561640ebce51bce3
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:15:11 2022 +0200
+
+    tiedosto.txt nimi muutettu -> eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit bab210dc27567552c6a7f63d03f77bfac9a05802
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:12:18 2022 +0200
+
+    tiedosto toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 9311ff03973edeb2754df70d11015badbade3b03
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:08:44 2022 +0200
+
+    tiedosto.txt poistettu ja lisätty tekstiä
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3347f4bff526ed23efc7e829659f783b8e98e406
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 17:06:09 2022 +0200
+
+    tiedosto.txt kopioitu tekstiä muualta
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 03f1465ac7261d326a5a6c54417ed0751c2ab342
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 16:59:22 2022 +0200
+
+    joku.txt lisätty stuffiin
+
+ stuff/joku.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 5eea1b0b8f2dfab28cb05e65bdf998d432806f21
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 16:57:02 2022 +0200
+
+    toinen ja kolmas muutettu
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 05f2bcce2863289367b480ac7cace09cab108884
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 16:54:07 2022 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 16f28721c1a7aac068f9bb96a3ea00976504028d
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 16:48:51 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit a347a84f73dff901ff507073b8999c77c0b27c64
+Author: laurelcrelia <laurel.matt@helsinki.fi>
+Date:   Mon Mar 21 16:40:55 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
