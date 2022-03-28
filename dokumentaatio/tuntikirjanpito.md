@@ -1,10 +1,10 @@
 # Tuntikirjanpito
 
 ### 28.3
-Aika: 1,5h
+Aika: 2h
 
 Mitä tein: Alustava vaatimusmäärittely
 
 
 ## Yhteensä:
-1,5h
+2h
