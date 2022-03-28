@@ -15,7 +15,7 @@ Tämä sovellus on tasohyppelypeli jossa pelaajan tulee väistellä vastustajia 
 
 [Unicafe](https://github.com/laurelcrelia/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe)
 
-[Testikattavuusraortti](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuusraportti.png)
+[Testikattavuusraportti](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuusraportti.png)
 
 ## Dokumentaatio:
 
