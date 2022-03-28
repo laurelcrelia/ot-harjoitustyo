@@ -6,6 +6,16 @@ Sovellus on tasohyppelypeli jossa pelaajan tulee väistää vastustajia pysyäks
 Käyttäjä voi valita itselleen tietyn pelihahmon rajatusta hahmovalikoimasta.
 Sovelluksella on vain yhdenlaista käyttäjätyyppiä sillä kaikilla käyttäjillä on samat oikeudet.
 
+## Käyttöliittymäluonnos
+
+Pelissä on viisi erilaista näkymää:
+- Aloitusnäkymä/valikko
+- Hahmon valitseminen
+- Pelin ohjeet
+- Itse pelinäkymä
+- Häviämisnäkymä
+
+![Käyttöliittymäluonnos](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittymaluonnos.jpg)
 
 ## Suunnitellut toiminnallisuudet perusversiolle:
 
