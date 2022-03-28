@@ -14,4 +14,4 @@ Tavallinen teksti
 
 [vaatimusmaarittely.md](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[tuntikirjanpito.md] (https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+[tuntikirjanpito.md](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
