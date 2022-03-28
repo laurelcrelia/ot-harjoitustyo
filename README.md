@@ -1,17 +1,19 @@
-# Otsikko
+# Tasohyppelypeli
 
-Tavallinen teksti
+Sovellus on tasohyppelypeli jossa pelaajan tulee väistellä vastustajia ja etsiä ovia päästäkseen seuraaville tasoille.
 
-**Lihavoitu teksti**
+## Laskarit:
 
-*Kursivoitu teksti*
-
-***Lihavoitu ja kursivoitu teksti***
+### Viikko 1:
 
 [komentorivi.txt](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-
 [gitlog.txt](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
-[vaatimusmaarittely.md](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+### Viikko 2:
 
-[tuntikirjanpito.md](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+
+## Dokumentaatio:
+
+[Vaatimusmäärittely](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+[Työaikakirjanpito](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
