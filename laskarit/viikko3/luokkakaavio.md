@@ -71,5 +71,5 @@
                 Pelilauta "1" --> "22" Katu :sisältää
                 Katu "1" --> "1" Pelaaja
                 Katu "1" --> "0..4" Talo
-                Katu "1" --> "1" Hotelli
+                Katu "1" --> "0..1" Hotelli
 
