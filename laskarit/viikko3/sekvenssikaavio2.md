@@ -15,7 +15,7 @@
 	Rau->>+K: kasvata_arvoa(3)
 	K-->>-M: True
 	M->>+Rat: osta_lippu(kallen_kortti, 0)
-	Rat->>-K: vahenna_arvoa(1.5)
+	Rat->>+K: vahenna_arvoa(1.5)
 	K-->>-M: True
 	M->>+B: osta_lippu(kallen_kortti, 2)
 	B-->>-M: False
