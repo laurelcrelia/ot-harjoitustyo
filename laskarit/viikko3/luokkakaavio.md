@@ -1,4 +1,4 @@
-
+```mermaid
 	classDiagram
 		class Pelilauta{
 			+String pelilauta
@@ -72,4 +72,5 @@
                 Katu "1" --> "1" Pelaaja
                 Katu "1" --> "0..4" Talo
                 Katu "1" --> "0..1" Hotelli
+```
 
