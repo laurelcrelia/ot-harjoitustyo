@@ -39,6 +39,7 @@
 	class Laitos{
 		+String laitosruutu
 		+laitos()
+	}
 	class Vero{
 		+String veroruutu
 		+vero()
