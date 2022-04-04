@@ -13,10 +13,7 @@
 	M->>LL: osta_matkakortti("Kalle")
 	M->>Rau: lataa_arvoa(kallen_kortti, 3)
 	Rau->>+UK: kasvata_arvoa(3)
-	UK-->>-M: "Kalle"
-	UK-->>-M: 0
-	UK-->>-M: 0
-	UK-->>-M: 3 
+	UK-->>-M: True
 	M->>Rat: osta_lippu(kallen_kortti, 0)
 	Rat->>+UK: vahenna_arvoa(1.5)
 	UK-->>-M: True
