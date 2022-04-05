@@ -1,17 +1,13 @@
 [tool.poetry]
-name = "ot-harjoitustyo"
+name = "tests"
 version = "0.1.0"
 description = ""
 authors = ["laurelcrelia <laurel.matt@helsinki.fi>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-invoke = "^1.7.0"
-pygame = "^2.1.2"
-cowsay = "^4.0"
 
 [tool.poetry.dev-dependencies]
-coverage = "^6.3.2"
 pytest = "^7.1.1"
 
 [build-system]
