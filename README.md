@@ -2,20 +2,8 @@
 
 Tässä pelissä pelaajan tulee väistellä vastustajia ja etsiä ovia päästäkseen seuraaville tasoille.
 
-## Laskarit:
+Pelin ensimmäisessä vaiheessa on käytetty ohjelmoinnin jatkokurssin Sokoban-pelin png-kuvatiedostoja "seina.png" ja "lattia.png". 
 
-#### Viikko 1:
-
-[komentorivi.txt](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-
-[gitlog.txt](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-#### Viikko 2:
-[Maksukortti](https://github.com/laurelcrelia/ot-harjoitustyo/tree/master/laskarit/viikko2/maksukortti)
-
-[Unicafe](https://github.com/laurelcrelia/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe)
-
-[Testikattavuusraportti](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuusraportti.png)
 
 ## Dokumentaatio:
 
