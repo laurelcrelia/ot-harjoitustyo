@@ -8,6 +8,7 @@ authors = ["laurelcrelia <laurel.matt@helsinki.fi>"]
 python = "^3.8"
 invoke = "^1.7.0"
 pygame = "^2.1.2"
+cowsay = "^4.0"
 
 [tool.poetry.dev-dependencies]
 

@@ -1,6 +1,7 @@
 import pygame
 from sprites.stickman import Stickman
-from sprites.platform import Platform
+from sprites.wall import Wall
+from sprites.floor import Floor
 from sprites.door import Door
 
 class Level:
@@ -8,7 +9,8 @@ class Level:
         self.cell_size = cell_size
         self.stickman = None
         self.door = None
-        self.platforms = pygame.sprite.Group()
+        self.walls = pygame.sprite.Group()
+        self.floors = pygame.sprite.Group()
 
         self.all_sprites = pygame.sprite.Group()
 
@@ -21,36 +23,23 @@ class Level:
         for i in range(height):
             for j in range(width):
                 cell = level_map[i][j]
-                x = j * self.cell_size
-                y = i * self.cell_size
+                nx = j * self.cell_size
+                ny = i * self.cell_size
 
                 if cell == 0:
-                    pass
+                    self.floors.add(Floor(nx,ny))
                 elif cell == 1:
-                    self.platforms.add(Platform(x,y))
+                    self.walls.add(Wall(nx,ny))
                 elif cell == 2:
-                    self.stickman.add(Stickman(x,y))
+                    self.stickman = Stickman(nx,ny)
                 elif cell == 3:
-                    self.door.add(Door(x,y))
+                    self.door = Door(nx,ny)
 
-        self.all_sprites.add(self.stickman, self.door, self,platforms)
-
-    #robon liike seinien välissä
-        if self.oikea:
-            if self.x+self.stickman.get_width() >= 640:
-                self.x = self.x
-            else:
-                self.x += 2
-        if self.vasen:
-            if self.x+self.stickman.get_width() <= 50:
-                self.x = self.x
-            else:
-                self.x -= 2
-
+        self.all_sprites.add(self.stickman, self.door, self.walls, self.floors)
 
     def movement_is_true(self, x=0, y=0):
         self.stickman.rect.move_ip(x,y)
-        hitting_walls = pygame.sprite.spritecollide(self.stickman, self.platforms, False)
+        hitting_walls = pygame.sprite.spritecollide(self.stickman, self.walls, False)
         can_move = not hitting_walls
         self.stickman.rect.move_ip(-x,-y)
         return can_move
