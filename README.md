@@ -1,6 +1,6 @@
-# Tasohyppelypeli
+# Stickman peli
 
-Tämä sovellus on tasohyppelypeli jossa pelaajan tulee väistellä vastustajia ja etsiä ovia päästäkseen seuraaville tasoille.
+Tässä pelissä pelaajan tulee väistellä vastustajia ja etsiä ovia päästäkseen seuraaville tasoille.
 
 ## Laskarit:
 
