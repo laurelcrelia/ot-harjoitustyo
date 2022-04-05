@@ -25,13 +25,12 @@ def main():
     level.all_sprites.draw(screen)
 
     clock = pygame.time.Clock()
+    clock.tick(60)
 
     run = True
     while run:
         for event in pygame.event.get():
             if event.type == KEYDOWN:
-                if event.key == K_ESCAPE:
-                    run = False
                 if event.key == K_LEFT:
                     level.move_stickman(x = -50)
                 if event.key == K_RIGHT:
@@ -45,7 +44,6 @@ def main():
 
         pygame.display.update()
         level.all_sprites.draw(screen)
-        clock.tick(60)
 
 
 if __name__ == "__main__":
