@@ -3,11 +3,11 @@ import os
 
 dirname = os.path.dirname(__file__)
 
-class Floor(pygame.sprite.Sprite):
+class Platform(pygame.sprite.Sprite):
     def __init__(self, x=0, y=0):
         super().__init__()
 
-        self.image = pygame.image.load(os.path.join(dirname,"..","assets","floor.png"))
+        self.image = pygame.image.load(os.path.join(dirname,"..","assets","platform.png"))
 
         self.rect = self.image.get_rect()
 
