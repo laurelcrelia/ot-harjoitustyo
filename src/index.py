@@ -3,6 +3,7 @@ from level import Level
 from game_loop import GameLoop
 from renderer import Renderer
 
+
 def main():
     """Luo peliruudukon ja mahdollistaa ruudukossa liikkumisen"""
 
@@ -26,7 +27,6 @@ def main():
     level = Level(level_1, size)
     renderer = Renderer(screen, level)
     game_loop = GameLoop(level, renderer, size, clock)
-
 
     pygame.init()
     game_loop.start()
