@@ -4,6 +4,7 @@ from sprites.wall import Wall
 from sprites.floor import Floor
 from sprites.door import Door
 
+
 class Level:
     def __init__(self, level_map, cell_size):
         self.cell_size = cell_size
@@ -11,7 +12,6 @@ class Level:
         self.door = None
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
-
 
         self.all_sprites = pygame.sprite.Group()
 
@@ -28,29 +28,27 @@ class Level:
                 ny = i * self.cell_size
 
                 if cell == 0:
-                    self.floors.add(Floor(nx,ny))
+                    self.floors.add(Floor(nx, ny))
                 elif cell == 1:
-                    self.walls.add(Wall(nx,ny))
+                    self.walls.add(Wall(nx, ny))
                 elif cell == 2:
-                    self.stickman = Stickman(nx,ny)
-                    self.floors.add(Floor(nx,ny))
+                    self.stickman = Stickman(nx, ny)
+                    self.floors.add(Floor(nx, ny))
                 elif cell == 3:
-                    self.door = Door(nx,ny)
-                    self.floors.add(Floor(nx,ny))
+                    self.door = Door(nx, ny)
+                    self.floors.add(Floor(nx, ny))
 
         self.all_sprites.add(self.floors, self.walls, self.stickman, self.door)
 
     def movement_is_true(self, x=0, y=0):
-        self.stickman.rect.move_ip(x,y)
-        hitting_walls = pygame.sprite.spritecollide(self.stickman, self.walls, False)
+        self.stickman.rect.move_ip(x, y)
+        hitting_walls = pygame.sprite.spritecollide(
+            self.stickman, self.walls, False)
         can_move = not hitting_walls
-        self.stickman.rect.move_ip(-x,-y)
+        self.stickman.rect.move_ip(-x, -y)
         return can_move
 
     def move_stickman(self, x=0, y=0):
-        if not self.movement_is_true(x,y):
-            return 
-        self.stickman.rect.move_ip(x,y)
-
-
-
+        if not self.movement_is_true(x, y):
+            return
+        self.stickman.rect.move_ip(x, y)
