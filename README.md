@@ -13,3 +13,6 @@ Pelin ensimmäisessä vaiheessa on käytetty ohjelmoinnin jatkokurssin Sokoban-p
 
 [Changelog](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
+[Arkkitehtuuri](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+
