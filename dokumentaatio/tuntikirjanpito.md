@@ -10,5 +10,10 @@ Aika : 9h
 
 Mitä tein: Harjoitustyön aloittaminen toteuttamalla pieni osa määrittelydokumentin toiminnallisuudesta, testaamisen aloittaminen.
 
+### 11.4
+Aika : 4h
+
+Mitä tein: Poetry invoke-tehtävät (test, coverage-report, pylint, format). Korjauksia koodin laatuun.
+
 ## Yhteensä:
-11h
+15h
