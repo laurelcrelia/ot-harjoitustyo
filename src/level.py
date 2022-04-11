@@ -24,19 +24,19 @@ class Level:
         for i in range(height):
             for j in range(width):
                 cell = level_map[i][j]
-                nx = j * self.cell_size
-                ny = i * self.cell_size
+                n_x = j * self.cell_size
+                n_y = i * self.cell_size
 
                 if cell == 0:
-                    self.floors.add(Floor(nx, ny))
+                    self.floors.add(Floor(n_x, n_y))
                 elif cell == 1:
-                    self.walls.add(Wall(nx, ny))
+                    self.walls.add(Wall(n_x, n_y))
                 elif cell == 2:
-                    self.stickman = Stickman(nx, ny)
-                    self.floors.add(Floor(nx, ny))
+                    self.stickman = Stickman(n_x, n_y)
+                    self.floors.add(Floor(n_x, n_y))
                 elif cell == 3:
-                    self.door = Door(nx, ny)
-                    self.floors.add(Floor(nx, ny))
+                    self.door = Door(n_x, n_y)
+                    self.floors.add(Floor(n_x, n_y))
 
         self.all_sprites.add(self.floors, self.walls, self.stickman, self.door)
 
