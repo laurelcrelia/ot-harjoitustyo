@@ -26,12 +26,12 @@ Pelin ensimmäisessä vaiheessa on käytetty ohjelmoinnin jatkokurssin Sokoban-p
 
 ## Komentorivitoiminnot
 
-**Ohjelman suorittaminen:**
+**Ohjelman käynnistys:**
 ```bash
 poetry run invoke start
 ```
 
-**Ohjelman testaus:**
+**Ohjelman testien ajaminen:**
 ```bash
 poetry run invoke test
 ```
@@ -41,7 +41,7 @@ poetry run invoke test
 poetry run invoke coverage-report
 ```
 
-**Pylint:**
+**Pylint-raportti:**
 ```bash
 poetry run invoke lint
 ```
