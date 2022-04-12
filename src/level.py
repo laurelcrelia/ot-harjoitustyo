@@ -7,12 +7,13 @@ from sprites.door import Door
 
 class Level:
     def __init__(self, level_map, cell_size):
+        self.score = 0
         self.cell_size = cell_size
         self.stickman = None
         self.door = None
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
-
+        
         self.all_sprites = pygame.sprite.Group()
 
         self._set_sprites(level_map)
@@ -44,7 +45,10 @@ class Level:
         self.stickman.rect.move_ip(x, y)
         hitting_walls = pygame.sprite.spritecollide(
             self.stickman, self.walls, False)
-        can_move = not hitting_walls
+        hitting_door = pygame.sprite.collide_rect(self.stickman, self.door)
+        if hitting_door:
+            self.stickman_finds_door()
+        can_move = not hitting_walls and not hitting_door
         self.stickman.rect.move_ip(-x, -y)
         return can_move
 
@@ -52,3 +56,12 @@ class Level:
         if not self.movement_is_true(x, y):
             return
         self.stickman.rect.move_ip(x, y)
+
+    def stickman_finds_door(self):
+        self.score += 1
+
+    def is_completed(self):
+        if self.score > 0:
+            return True
+
+

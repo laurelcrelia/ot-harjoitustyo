@@ -19,17 +19,18 @@ def main():
     size = 50
 
     screen = pygame.display.set_mode((400, 400))
-    pygame.display.set_caption("Stickman")
+    pygame.display.set_caption("Labyrinth")
 
     clock = pygame.time.Clock()
     clock.tick(60)
 
+    pygame.init()
+
     level = Level(level_1, size)
     renderer = Renderer(screen, level)
-    game_loop = GameLoop(level, renderer, size, clock)
+    game_loop = GameLoop(level, screen, renderer, size, clock)
 
-    pygame.init()
-    game_loop.start()
+    game_loop.draw_menu()
 
 
 if __name__ == "__main__":
