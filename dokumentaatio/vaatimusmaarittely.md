@@ -2,17 +2,17 @@
 
 ## Sovelluksen tarkoitus:
 
-Sovellus on tasohyppelypeli jossa pelaajan tulee väistää vastustajia pysyäkseen elossa ja löytää ovi päästäkseen uudelle tasolle.
+Sovellus on labyrinttipeli jossa pelaajan tulee väistää vastustajia pysyäkseen elossa ja löytää ovi päästäkseen uudelle tasolle.
 Käyttäjä voi valita itselleen tietyn pelihahmon rajatusta hahmovalikoimasta.
 Sovelluksella on vain yhdenlaista käyttäjätyyppiä sillä kaikilla käyttäjillä on samat oikeudet.
 
 ## Käyttöliittymäluonnos
 
 Pelissä on viisi erilaista näkymää:
-- Aloitusnäkymä/valikko
+- Aloitusnäkymä/valikko **"tehty"**(alustava versio aloitusnäkymästä)
 - Hahmon valitseminen
 - Pelin ohjeet
-- Itse pelinäkymä
+- Itse pelinäkymä **"tehty"**(pelin ensimmäinen taso)
 - Häviämisnäkymä
 
 ![Käyttöliittymäluonnos](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittymaluonnos.jpg)
@@ -28,7 +28,7 @@ Pelissä on viisi erilaista näkymää:
   
 - Pelaajalla on aluksi 3 elämää
 
-- Peli alkaa tasosta 1 joka on ns harjoittelukierros
+- Peli alkaa tasosta 1 joka on ns harjoittelukierros **"tehty"**
   - Taso 1 ei sisällä vastustajia 
   - Pelaajan tulee löytää ovi josta pääsee uudelle tasolle
   
