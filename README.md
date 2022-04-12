@@ -15,4 +15,35 @@ Pelin ensimmäisessä vaiheessa on käytetty ohjelmoinnin jatkokurssin Sokoban-p
 
 [Arkkitehtuuri](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+## Asennus
+
+1. Asenna riippuvuudet:
+```poetry install```
+2. Suorita vaadittavat alustustoimenpiteet:
+```poetry run invoke build```
+3. Käynnistä sovellus:
+```poetry run invoke start```
+
+## Komentorivitoiminnot
+
+**Ohjelman suorittaminen:**
+```bash
+poetry run invoke start
+```
+
+**Ohjelman testaus:**
+```bash
+poetry run invoke test
+```
+
+**Testikattavuusraportti:**
+``` bash
+poetry run invoke coverage-report
+```
+
+**Pylint:**
+```bash
+poetry run invoke lint
+```
+
 
