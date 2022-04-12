@@ -32,10 +32,10 @@
 	}
 	Game --> Renderer
 	Game --> GameLoop
+	GameLoop ..> Renderer
 	Game --> Level
 	Level --> "1" Door
-  Level --> "*" Floor
-  Level --> "1" Stickman
-  Level --> "*" Wall
-  GameLoop ..> Renderer
+	Level --> "*" Floor
+	Level --> "1" Stickman
+	Level --> "*" Wall
 ```
