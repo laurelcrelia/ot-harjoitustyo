@@ -52,7 +52,6 @@ class GameLoop:
         if not self.menu_screen_on:
             sys.exit()
 
-
     def movements(self):
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
@@ -73,17 +72,18 @@ class GameLoop:
     def menu_initialization(self):
         self.screen.fill((169, 169, 169))
         game_title_text = self.font1.render("Labyrinth", False, (0, 0, 0))
-        play_game_text = self.font2.render("Start by pressing space", False, (205, 38, 38))
+        play_game_text = self.font2.render(
+            "Start by pressing space", False, (205, 38, 38))
         self.screen.blit(game_title_text, (125, 130))
         self.screen.blit(play_game_text, (90, 200))
         pygame.display.update()
 
-
     def level_completed_initialization(self):
         self.screen.fill((151, 255, 255))
-        level_passed_text = self.font2.render("Gongratulations you passed this level!", False, (0, 0, 0))
-        exit_text = self.font2.render("Exit by pressing esc", False, (205, 38, 38))
+        level_passed_text = self.font2.render(
+            "Gongratulations you passed this level!", False, (0, 0, 0))
+        exit_text = self.font2.render(
+            "Exit by pressing esc", False, (205, 38, 38))
         self.screen.blit(level_passed_text, (20, 130))
         self.screen.blit(exit_text, (90, 200))
         pygame.display.update()
-

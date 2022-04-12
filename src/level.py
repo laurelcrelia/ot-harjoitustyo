@@ -13,7 +13,7 @@ class Level:
         self.door = None
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
-        
+
         self.all_sprites = pygame.sprite.Group()
 
         self._set_sprites(level_map)
@@ -63,5 +63,3 @@ class Level:
     def is_completed(self):
         if self.score > 0:
             return True
-
-
