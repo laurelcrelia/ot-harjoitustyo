@@ -15,5 +15,10 @@ Aika : 6h
 
 Mitä tein: Poetry invoke-tehtävät (test, coverage-report, pylint, format). Korjauksia koodin laatuun. Korjauksia arkkitehtuuriin ja luokkien selkeyteen.
 
+### 12.4
+Aika : 5,5h
+
+Mitä tein: Luokkakaavio, README.md:n päivitys. Lisää toiminnallisuutta peliin: aloitusruutu, läpäisee tason kun löytää oven, lopetusruutu.
+
 ## Yhteensä:
-17h
+22,5h
