@@ -3,11 +3,10 @@ from level import Level
 from game_loop import GameLoop
 from renderer import Renderer
 
-
-def main():
-    """Luo peliruudukon ja mahdollistaa ruudukossa liikkumisen"""
-
-    level_1 = [[1, 1, 1, 1, 1, 1, 1, 1],
+class Game:
+    def __init__(self):
+        self.size = 50
+        self.level_1 = [[1, 1, 1, 1, 1, 1, 1, 1],
                [1, 0, 0, 1, 0, 0, 3, 1],
                [1, 0, 0, 0, 0, 1, 1, 1],
                [1, 1, 1, 1, 0, 0, 1, 1],
@@ -15,23 +14,39 @@ def main():
                [1, 0, 1, 0, 1, 1, 0, 1],
                [1, 2, 1, 0, 0, 0, 0, 1],
                [1, 1, 1, 1, 1, 1, 1, 1]]
+        self.screen = pygame.display.set_mode((400, 400))
+        pygame.display.set_caption("Labyrinth")
+        self.clock = pygame.time.Clock()
+        self.clock.tick(60)
 
-    size = 50
+    def main(self):
+        """Luo peliruudukon ja mahdollistaa ruudukossa liikkumisen"""
+        pygame.init()
 
-    screen = pygame.display.set_mode((400, 400))
-    pygame.display.set_caption("Labyrinth")
+        level = Level(self.level_1, self.size)
+        renderer = Renderer(self.screen, level)
+        game_loop = GameLoop(level, self.screen, renderer, self.size, self.clock)
 
-    clock = pygame.time.Clock()
-    clock.tick(60)
-
-    pygame.init()
-
-    level = Level(level_1, size)
-    renderer = Renderer(screen, level)
-    game_loop = GameLoop(level, screen, renderer, size, clock)
-
-    game_loop.draw_menu()
+        game_loop.draw_menu()
 
 
 if __name__ == "__main__":
-    main()
+    GAME = Game()
+    GAME.main()
+
+# level_1 = [[1, 1, 1, 1, 1, 1, 1, 1],
+    #            [1, 0, 0, 1, 0, 0, 3, 1],
+    #            [1, 0, 0, 0, 0, 1, 1, 1],
+    #            [1, 1, 1, 1, 0, 0, 1, 1],
+    #            [1, 0, 0, 0, 1, 0, 0, 1],
+    #            [1, 0, 1, 0, 1, 1, 0, 1],
+    #            [1, 2, 1, 0, 0, 0, 0, 1],
+    #            [1, 1, 1, 1, 1, 1, 1, 1]]
+
+    # size = 50
+
+    # screen = pygame.display.set_mode((400, 400))
+    # pygame.display.set_caption("Labyrinth")
+
+    # clock = pygame.time.Clock()
+    # clock.tick(60)
