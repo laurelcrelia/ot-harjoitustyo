@@ -1,6 +1,6 @@
-# Stickman peli
+# Labyrinttipeli
 
-Tässä pelissä pelaajan tulee väistellä vastustajia ja etsiä ovia päästäkseen seuraaville tasoille.
+Tässä pelissä pelaajan tulee väistellä labyrintin varrella olevia vihollisia ja löytää ovi päästäkseen seuraaville tasoille.
 
 Pelin ensimmäisessä vaiheessa on käytetty ohjelmoinnin jatkokurssin Sokoban-pelin png-kuvatiedostoja "seina.png" ja "lattia.png". 
 
