@@ -13,7 +13,7 @@ Pelissä on viisi erilaista näkymää:
 - Hahmon valitseminen
 - Pelin ohjeet
 - Itse pelinäkymä **"tehty"**(pelin ensimmäinen taso)
-- Häviämisnäkymä
+- Häviämisnäkymä/pelin läpäisynäkymä **"tehty"**(ensimmäisen tason läpäisynäkymä)
 
 ![Käyttöliittymäluonnos](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittymaluonnos.jpg)
 
