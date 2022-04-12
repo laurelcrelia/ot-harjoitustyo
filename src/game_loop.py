@@ -11,8 +11,6 @@ class GameLoop:
         self.clock = clock
         self.menu_screen_on = True
         self.level_completed_screen_on = True
-        self.font1 = pygame.font.SysFont("Segoe UI", 50)
-        self.font2 = pygame.font.SysFont("Segoe UI", 30)
 
     def start(self):
         while True:
@@ -31,9 +29,8 @@ class GameLoop:
 
         while self.menu_screen_on:
             for event in pygame.event.get():
-                if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_SPACE:
-                        self.menu_screen_on = False
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                    self.menu_screen_on = False
                 if event.type == pygame.QUIT:
                     sys.exit()
         if not self.menu_screen_on:
@@ -44,9 +41,8 @@ class GameLoop:
 
         while self.level_completed_screen_on:
             for event in pygame.event.get():
-                if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_ESCAPE:
-                        self.level_completed_screen_on = False
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                    self.level_completed_screen_on = False
                 if event.type == pygame.QUIT:
                     sys.exit()
         if not self.menu_screen_on:
@@ -70,19 +66,22 @@ class GameLoop:
         self.renderer.render()
 
     def menu_initialization(self):
+        font1 = pygame.font.SysFont("Segoe UI", 50)
+        font2 = pygame.font.SysFont("Segoe UI", 30)
         self.screen.fill((169, 169, 169))
-        game_title_text = self.font1.render("Labyrinth", False, (0, 0, 0))
-        play_game_text = self.font2.render(
+        game_title_text = font1.render("Labyrinth", False, (0, 0, 0))
+        play_game_text = font2.render(
             "Start by pressing space", False, (205, 38, 38))
         self.screen.blit(game_title_text, (125, 130))
         self.screen.blit(play_game_text, (90, 200))
         pygame.display.update()
 
     def level_completed_initialization(self):
+        font2 = pygame.font.SysFont("Segoe UI", 30)
         self.screen.fill((151, 255, 255))
-        level_passed_text = self.font2.render(
+        level_passed_text = font2.render(
             "Gongratulations you passed this level!", False, (0, 0, 0))
-        exit_text = self.font2.render(
+        exit_text = font2.render(
             "Exit by pressing esc", False, (205, 38, 38))
         self.screen.blit(level_passed_text, (20, 130))
         self.screen.blit(exit_text, (90, 200))

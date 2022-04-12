@@ -35,4 +35,3 @@ class Game:
 if __name__ == "__main__":
     GAME = Game()
     GAME.main()
-
