@@ -23,7 +23,7 @@ Mitä tein: Luokkakaavio, README.md:n päivitys. Lisää toiminnallisuutta pelii
 ### 13.4
 Aika : 2h
 
-Mitä tein: Lisäsin peliin monsterin ja loin siihen liittyen jo hieman koodia mutta kommentoituna jotta se ei häiritse viikon 4 palautuksen testejä. Liäksi loin game_over -näkymään liittyvää koodia.
+Mitä tein: Lisäsin peliin monsterin ja loin siihen liittyen jo hieman koodia mutta kommentoituna jotta se ei häiritse viikon 4 palautuksen testejä. Lisäksi loin game_over -näkymään liittyvää koodia.
 
 ## Yhteensä:
 24,5h
