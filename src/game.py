@@ -18,7 +18,7 @@ class Game:
 
         self.level_2 = [[1, 1, 1, 1, 1, 1, 1, 1],
                         [1, 0, 0, 1, 0, 0, 3, 1],
-                        [1, 0, 0, 0, 0, 1, 1, 1],
+                        [1, 4, 0, 0, 0, 1, 1, 1],
                         [1, 1, 1, 1, 0, 0, 1, 1],
                         [1, 0, 0, 0, 1, 0, 0, 1],
                         [1, 0, 1, 0, 1, 1, 0, 1],
@@ -33,7 +33,6 @@ class Game:
     def main(self):
         """Luo peliruudukon ja mahdollistaa ruudukossa liikkumisen"""
         pygame.init()
-
         level = Level(self.level_1, self.size)
         renderer = Renderer(self.screen, level)
         game_loop = GameLoop(level, self.screen, renderer,
