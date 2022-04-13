@@ -38,6 +38,9 @@ class Level:
                 elif cell == 3:
                     self.door = Door(n_x, n_y)
                     self.floors.add(Floor(n_x, n_y))
+                # elif cell == 4:
+                #     self.monster = Monster(n_x, n_y))
+                #     self.floors.add(Floor(n_x, n_y))
 
         self.all_sprites.add(self.floors, self.walls, self.stickman, self.door)
 
