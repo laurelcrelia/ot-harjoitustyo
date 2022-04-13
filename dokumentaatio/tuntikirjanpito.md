@@ -20,5 +20,10 @@ Aika : 5,5h
 
 Mitä tein: Luokkakaavio, README.md:n päivitys. Lisää toiminnallisuutta peliin: aloitusruutu, läpäisee tason kun löytää oven, lopetusruutu.
 
+### 13.4
+Aika : 2h
+
+Mitä tein: Lisäsin peliin monsterin ja loin siihen liittyen jo hieman koodia mutta kommentoituna jotta se ei häiritse viikon 4 palautuksen testejä. Liäksi loin game_over -näkymään liittyvää koodia.
+
 ## Yhteensä:
-22,5h
+24,5h
