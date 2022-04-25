@@ -3,12 +3,13 @@ import pygame
 
 
 class GameLoop:
-    def __init__(self, level, screen, renderer, cell_size, clock):
+    def __init__(self, level, screen, renderer, cell_size, clock, menu):
         self.level = level
         self.screen = screen
         self.renderer = renderer
         self.cell_size = cell_size
         self.clock = clock
+        self.menu = menu
         self.menu_screen_on = True
         self.level_completed_screen_on = True
         self.game_over_screen_on = True
@@ -29,15 +30,7 @@ class GameLoop:
             self.clock.tick(60)
 
     def draw_menu(self):
-        self.menu_initialization()
-
-        while self.menu_screen_on:
-            for event in pygame.event.get():
-                if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-                    self.menu_screen_on = False
-                if event.type == pygame.QUIT:
-                    sys.exit()
-        if not self.menu_screen_on:
+        if self.menu.initialize() is False:      
             self.start()
 
     def draw_level_completed(self):
@@ -81,16 +74,16 @@ class GameLoop:
     def render(self):
         self.renderer.render()
 
-    def menu_initialization(self):
-        font1 = pygame.font.SysFont("Segoe UI", 50)
-        font2 = pygame.font.SysFont("Segoe UI", 30)
-        self.screen.fill((169, 169, 169))
-        game_title_text = font1.render("Labyrinth", False, (0, 0, 0))
-        play_game_text = font2.render(
-            "Start by pressing space", False, (205, 38, 38))
-        self.screen.blit(game_title_text, (100, 130))
-        self.screen.blit(play_game_text, (60, 200))
-        pygame.display.update()
+    # def menu_initialization(self):
+    #     font1 = pygame.font.SysFont("Segoe UI", 50)
+    #     font2 = pygame.font.SysFont("Segoe UI", 30)
+    #     self.screen.fill((169, 169, 169))
+    #     game_title_text = font1.render("Labyrinth", False, (0, 0, 0))
+    #     play_game_text = font2.render(
+    #         "Start by pressing space", False, (205, 38, 38))
+    #     self.screen.blit(game_title_text, (100, 130))
+    #     self.screen.blit(play_game_text, (60, 200))
+    #     pygame.display.update()
 
     def level_completed_initialization(self):
         font1 = pygame.font.SysFont("Segoe UI", 22)

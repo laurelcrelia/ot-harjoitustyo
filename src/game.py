@@ -2,6 +2,7 @@ import pygame
 from level import Level
 from game_loop import GameLoop
 from renderer import Renderer
+from menu import MenuView
 
 
 class Game:
@@ -35,9 +36,10 @@ class Game:
         pygame.init()
         level = Level(self.level_1, self.size)
         renderer = Renderer(self.screen, level)
-        game_loop = GameLoop(level, self.screen, renderer,
+        menu = MenuView(level, self.screen, renderer,
                              self.size, self.clock)
-
+        game_loop = GameLoop(level, self.screen, renderer,
+                             self.size, self.clock, menu)
         game_loop.draw_menu()
 
 
