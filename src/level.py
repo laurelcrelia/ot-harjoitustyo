@@ -43,8 +43,21 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
                 elif cell == 4:
                     self.monster = Monster(n_x, n_y)
                     self.floors.add(Floor(n_x, n_y))
-        self.all_sprites.add(self.floors, self.walls,
-                             self.stickman, self.monster, self.door)
+
+        if self.level_map == [[1, 1, 1, 1, 1, 1, 1, 1],
+                              [1, 0, 0, 1, 0, 0, 3, 1],
+                              [1, 0, 0, 0, 0, 1, 1, 1],
+                              [1, 1, 1, 1, 0, 0, 1, 1],
+                              [1, 0, 0, 0, 1, 0, 0, 1],
+                              [1, 0, 1, 0, 1, 1, 0, 1],
+                              [1, 2, 1, 0, 0, 0, 0, 1],
+                              [1, 1, 1, 1, 1, 1, 1, 1]]:
+            self.all_sprites.add(self.floors, self.walls,
+                                 self.stickman, self.door)
+        else:
+            self.all_sprites.add(self.floors, self.walls,
+                                 self.stickman, self.monster, self.door)
+
 
     def movement_is_true(self, x=0, y=0):
         self.stickman.rect.move_ip(x, y)
