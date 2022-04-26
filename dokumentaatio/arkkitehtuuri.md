@@ -41,3 +41,26 @@
 	Level --> "1" Stickman
 	Level --> "*" Wall
 ```
+
+# Sekvenssikaavio
+
+Tämä sekvenssikaavio kuvaa sitä tilannetta kun pelaaja aloittaa pelin painamalla "play" buttonia aloitusruudulla ja tämän jälkeen pelatessa häviää pelin osumalla monsteriin. Häviämisen seurauksena avautuu "game over" näkymä. 
+
+Huom tämä sekvenssikaavio on yksinkertaistettu eikä kuvaa tarkempia tapahtumia pelihahmon liikuttamisesta ja monsteriin osumisesta pelin aikana!
+
+```mermaid	
+ sequenceDiagram
+	actor U as User
+	participant G as Game_loop
+	participant M as Menu
+	participant R as Renderer
+	participant L as Level
+	U->>G: click "play" button
+	G->>M: initialize()
+	M-->>G: False
+	G->>R: render()
+	R->>L: all_sprites.draw()
+	G->>L: stickman_dies()
+	L-->>G: True
+	G->G: draw_game_over()
+```
