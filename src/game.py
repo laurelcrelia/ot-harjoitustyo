@@ -34,13 +34,13 @@ class Game:
     def main(self):
         """Luo peliruudukon ja mahdollistaa ruudukossa liikkumisen"""
         pygame.init()
-        level = Level(self.level_1, self.size)
+        level = Level(self.level_2, self.size)
         renderer = Renderer(self.screen, level)
         menu = MenuView(level, self.screen, renderer,
-                             self.size, self.clock)
+                        self.size, self.clock)
         game_loop = GameLoop(level, self.screen, renderer,
                              self.size, self.clock, menu)
-        game_loop.draw_menu()
+        game_loop.start()
 
 
 if __name__ == "__main__":

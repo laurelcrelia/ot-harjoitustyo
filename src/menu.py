@@ -1,5 +1,6 @@
 import pygame
 
+
 class MenuView:
     def __init__(self, level, screen, renderer, cell_size, clock):
         self.level = level
@@ -10,63 +11,61 @@ class MenuView:
 
     def start_button(self):
         width = 170
-        height = 200
+        height = 180
         font2 = pygame.font.SysFont("Segoe UI", 30)
         play_text = font2.render(
             "Play", True, (205, 38, 38))
-        while True:
-            mouse = pygame.mouse.get_pos()
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()
-                if event.type == pygame.MOUSEBUTTONDOWN:
-                    if width-10 <= mouse[0] <= width+50 and height-5 <= mouse[1] <= height+25:
-                        return False
-            if width-10 <= mouse[0] <= width+50 and height-5 <= mouse[1] <= height+25:
-                pygame.draw.rect(self.screen,(190,190,190),[width-10,height-5,60,30])
-            else:
-                pygame.draw.rect(self.screen,(100,100,100),[width-10,height-5,60,30])
+        mouse = pygame.mouse.get_pos()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
+                    return False
+        if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
+            pygame.draw.rect(self.screen, (190, 190, 190),
+                             [width-10, height-5, 80, 40])
+        else:
+            pygame.draw.rect(self.screen, (100, 100, 100),
+                             [width-10, height-5, 80, 40])
 
-            self.screen.blit(play_text, (width, height))
-            pygame.display.update()
+        self.screen.blit(play_text, (width, height))
 
     def exit_button(self):
         width = 170
-        height = 250
+        height = 240
         font2 = pygame.font.SysFont("Segoe UI", 30)
-        play_text = font2.render(
+        text = font2.render(
             "Exit", True, (205, 38, 38))
-        while True:
-            mouse = pygame.mouse.get_pos()
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
+        mouse = pygame.mouse.get_pos()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
                     pygame.quit()
-                if event.type == pygame.MOUSEBUTTONDOWN:
-                    if width-10 <= mouse[0] <= width+50 and height-5 <= mouse[1] <= height+25:
-                        pygame.quit()
-            if width-10 <= mouse[0] <= width+50 and height-5 <= mouse[1] <= height+25:
-                pygame.draw.rect(self.screen,(190,190,190),[width-10,height-5,60,30])
-            else:
-                pygame.draw.rect(self.screen,(100,100,100),[width-10,height-5,60,30])
+        if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
+            pygame.draw.rect(self.screen, (190, 190, 190),
+                             [width-10, height-5, 80, 40])
+        else:
+            pygame.draw.rect(self.screen, (100, 100, 100),
+                             [width-10, height-5, 80, 40])
 
-            self.screen.blit(play_text, (width, height))
-            pygame.display.update()
+        self.screen.blit(text, (width, height))
 
     def game_title(self):
         font1 = pygame.font.SysFont("Segoe UI", 50)
         game_title_text = font1.render("Labyrinth", False, (0, 0, 0))
         self.screen.fill((169, 169, 169))
-        self.screen.blit(game_title_text, (100, 130))
+        self.screen.blit(game_title_text, (100, 90))
 
     def initialize(self):
-        self.game_title()
-        self.exit_button()
-        self.start_button()
-        if self.start_button() is False:
-            return False
-        
-
-                        
+        while True:
+            self.game_title()
+            if self.start_button() is False:
+                return False
+            self.exit_button()
+            pygame.display.update()
 
     # def draw(self):
     #     self.initialize()

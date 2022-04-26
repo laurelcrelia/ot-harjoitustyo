@@ -10,28 +10,24 @@ class GameLoop:
         self.cell_size = cell_size
         self.clock = clock
         self.menu = menu
-        self.menu_screen_on = True
         self.level_completed_screen_on = True
         self.game_over_screen_on = True
 
     def start(self):
-        while True:
-            if self.movements() is False:
-                break
+        if self.menu.initialize() is False:
+            while True:
+                if self.movements() is False:
+                    break
 
-            self.render()
+                self.render()
 
-            if self.level.is_completed() is True:
-                self.draw_level_completed()
+                if self.level.game_over() is True:
+                    self.draw_game_over()
 
-            # if self.level.game_over() is True:
-            #     self.draw_game_over()
+                if self.level.is_completed() is True:
+                    self.draw_level_completed()
 
-            self.clock.tick(60)
-
-    def draw_menu(self):
-        if self.menu.initialize() is False:      
-            self.start()
+                self.clock.tick(60)
 
     def draw_level_completed(self):
         self.level_completed_initialization()
@@ -45,17 +41,17 @@ class GameLoop:
         if not self.level_completed_screen_on:
             sys.exit()
 
-    # def draw_game_over(self):
-    #     self.game_over_initialization()
+    def draw_game_over(self):
+        self.game_over_initialization()
 
-    #     while self.game_over_screen_on:
-    #         for event in pygame.event.get():
-    #             if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-    #                 self.game_over_screen_on = False
-    #             if event.type == pygame.QUIT:
-    #                 sys.exit()
-    #     if not self.game_over_screen_on:
-    #         sys.exit()
+        while self.game_over_screen_on:
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                    self.game_over_screen_on = False
+                if event.type == pygame.QUIT:
+                    sys.exit()
+        if not self.game_over_screen_on:
+            sys.exit()
 
     def movements(self):
         for event in pygame.event.get():
@@ -97,14 +93,14 @@ class GameLoop:
         self.screen.blit(exit_text, (70, 200))
         pygame.display.update()
 
-    # def game_over_initialization(self):
-    #     font1 = pygame.font.SysFont("Segoe UI", 35)
-    #     font2 = pygame.font.SysFont("Segoe UI", 27)
-    #     self.screen.fill((151, 255, 255))
-    #     level_game_over_text = font1.render(
-    #         "Game Over :(", False, (0, 0, 0))
-    #     exit_text = font2.render(
-    #         "Exit by pressing esc", False, (205, 38, 38))
-    #     self.screen.blit(level_game_over_text, (70, 130))
-    #     self.screen.blit(exit_text, (70, 200))
-    #     pygame.display.update()
+    def game_over_initialization(self):
+        font1 = pygame.font.SysFont("Segoe UI", 35)
+        font2 = pygame.font.SysFont("Segoe UI", 27)
+        self.screen.fill((151, 255, 255))
+        level_game_over_text = font1.render(
+            "Game Over :(", False, (0, 0, 0))
+        exit_text = font2.render(
+            "Exit by pressing esc", False, (205, 38, 38))
+        self.screen.blit(level_game_over_text, (70, 130))
+        self.screen.blit(exit_text, (70, 200))
+        pygame.display.update()
