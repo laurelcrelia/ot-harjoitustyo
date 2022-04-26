@@ -109,11 +109,14 @@ class GameLoop:
         font2 = pygame.font.SysFont("Segoe UI", 27)
         self.screen.fill((151, 255, 255))
         level_passed_text = font1.render(
-            "Gongratulations you passed this level!", False, (0, 0, 0))
-        exit_text = font2.render(
-            "Exit by pressing esc", False, (205, 38, 38))
-        self.screen.blit(level_passed_text, (15, 130))
-        self.screen.blit(exit_text, (70, 200))
+            "Congratulations you passed this level!", False, (0, 0, 0))
+        press_space_text = font2.render(
+            "Press space for next level", False, (205, 38, 38))
+        # exit_text = font2.render(
+        #     "Exit by pressing esc", False, (205, 38, 38))
+        self.screen.blit(level_passed_text, (20, 120))
+        self.screen.blit(press_space_text, (45, 170))
+        # self.screen.blit(exit_text, (80, 220))
         pygame.display.update()
 
     def game_over_initialization(self):
