@@ -21,7 +21,7 @@ class GameLoop:
 
                 self.render()
 
-                if self.level.game_over() is True:
+                if self.level.stickman_dies() is True:
                     self.draw_game_over()
 
                 if self.level.is_completed() is True:

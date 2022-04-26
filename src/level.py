@@ -6,7 +6,7 @@ from sprites.door import Door
 from sprites.monster import Monster
 
 
-class Level:
+class Level:  # pylint: disable=too-many-instance-attributes # all these instance attributes are necessary
     def __init__(self, level_map, cell_size):
         self.score = 0
         self.hearts = 1
@@ -56,7 +56,7 @@ class Level:
         if hitting_door:
             self.stickman_finds_door()
         if hitting_monster:
-            self.stickman_dies()
+            self.hearts -= 1
         can_move = not hitting_walls and not hitting_door and not hitting_monster
         self.stickman.rect.move_ip(-x, -y)
         return can_move
@@ -70,9 +70,6 @@ class Level:
         self.score += 1
 
     def stickman_dies(self):
-        self.hearts -= 1
-
-    def game_over(self):
         if self.hearts == 0:
             return True
 

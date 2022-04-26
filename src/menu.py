@@ -2,12 +2,8 @@ import pygame
 
 
 class MenuView:
-    def __init__(self, level, screen, renderer, cell_size, clock):
-        self.level = level
+    def __init__(self, screen):
         self.screen = screen
-        self.renderer = renderer
-        self.cell_size = cell_size
-        self.clock = clock
 
     def start_button(self):
         width = 170
