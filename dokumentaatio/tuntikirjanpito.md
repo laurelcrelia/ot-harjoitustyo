@@ -31,9 +31,9 @@ Aika : 4h
 Mitä tein: Loin pelin aloitusruutuun kaksi buttonia. 
 
 ### 26.4
-Aika: 3h
+Aika: 6h
 
-Mitä tein: Paransin vielä vähän aloitusruudun buttoneita. Sain ruudulle ilmestymään game_over -näkymän kun pelihahmo osuu monsteriin ja kuolee. Laajensin testejä niin että myös monsteri on otettu huomioon. 
+Mitä tein: Paransin vielä vähän aloitusruudun buttoneita. Sain ruudulle ilmestymään game_over -näkymän kun pelihahmo osuu monsteriin ja kuolee. Laajensin testejä niin että myös monsteri on otettu huomioon. Ensimmäinen release. Sain pelin vaihtamaan toiselle tasolle kun läpäisee ensimmäisen.
 
 ## Yhteensä:
-31,5h
+34,5h
