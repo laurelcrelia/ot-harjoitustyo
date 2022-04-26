@@ -5,6 +5,10 @@ Tässä pelissä pelaajan tulee väistellä labyrintin varrella olevia vihollisi
 Pelinäkymässä on käytetty ohjelmoinnin jatkokurssin Sokoban-pelin png-kuvatiedostoja "seina.png" ja "lattia.png". 
 
 
+## Release
+[Release 1](https://github.com/laurelcrelia/ot-harjoitustyo/releases/tag/viikko5)
+
+
 ## Dokumentaatio:
 
 [Vaatimusmäärittely](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
