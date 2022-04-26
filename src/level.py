@@ -20,7 +20,8 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         self.all_sprites = pygame.sprite.Group()
         self._set_sprites(level_map)
 
-    def _set_sprites(self, level_map):
+    def _set_sprites(self, level_map):  # pylint: disable=too-many-statements
+        # these statements are required otherwise there would be monster in the first level
         height = len(level_map)
         width = len(level_map[0])
 
@@ -57,7 +58,6 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         else:
             self.all_sprites.add(self.floors, self.walls,
                                  self.stickman, self.monster, self.door)
-
 
     def movement_is_true(self, x=0, y=0):
         self.stickman.rect.move_ip(x, y)
