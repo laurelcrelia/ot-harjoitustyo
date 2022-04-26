@@ -25,5 +25,15 @@ Aika : 2h
 
 Mitä tein: Lisäsin peliin monsterin ja loin siihen liittyen jo hieman koodia mutta kommentoituna jotta se ei häiritse viikon 4 palautuksen testejä. Lisäksi loin game_over -näkymään liittyvää koodia.
 
+### 25.4
+Aika : 4h
+
+Mitä tein: Loin pelin aloitusruutuun kaksi buttonia. 
+
+### 26.4
+Aika: 3h
+
+Mitä tein: Paransin vielä vähän aloitusruudun buttoneita. Sain ruudulle ilmestymään game_over -näkymän kun pelihahmo osuu monsteriin ja kuolee. Laajensin testejä niin että myös monsteri on otettu huomioon. 
+
 ## Yhteensä:
-24,5h
+31,5h
