@@ -17,7 +17,7 @@ class MenuView:
                 pygame.quit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
-                    return False
+                    return True
         if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
             pygame.draw.rect(self.screen, (190, 190, 190),
                              [width-10, height-5, 80, 40])
@@ -58,7 +58,7 @@ class MenuView:
     def initialize(self):
         while True:
             self.game_title()
-            if self.start_button() is False:
+            if self.start_button() is True:
                 return False
             self.exit_button()
             pygame.display.update()
