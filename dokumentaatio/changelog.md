@@ -15,3 +15,4 @@
 - Monsteri lisätty joka tulee peliin tasosta 2 alkaen
 - Testattu että hahmo ei voi liikkua monsterin tai oven läpi
 - Peli päättyy häviöön jos pelihahmo osuu monsteriin
+- Peli alkaa ensimmäisestä tasosta ja sen läpäistyä pääsee toiselle tasolle
