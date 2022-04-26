@@ -3,7 +3,7 @@ from sprites.stickman import Stickman
 from sprites.wall import Wall
 from sprites.floor import Floor
 from sprites.door import Door
-# from sprites.monster import Monster
+from sprites.monster import Monster
 
 
 class Level:
@@ -13,12 +13,10 @@ class Level:
         self.cell_size = cell_size
         self.stickman = None
         self.door = None
+        self.monster = None
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
-        # self.monster = None
-
         self.all_sprites = pygame.sprite.Group()
-
         self._set_sprites(level_map)
 
     def _set_sprites(self, level_map):
@@ -41,23 +39,25 @@ class Level:
                 elif cell == 3:
                     self.door = Door(n_x, n_y)
                     self.floors.add(Floor(n_x, n_y))
-                # elif cell == 4:
-                #     self.monster = Monster(n_x, n_y)
-                #     self.floors.add(Floor(n_x, n_y))
+                elif cell == 4:
+                    self.monster = Monster(n_x, n_y)
+                    self.floors.add(Floor(n_x, n_y))
 
-        self.all_sprites.add(self.floors, self.walls, self.stickman, self.door)
+        self.all_sprites.add(self.floors, self.walls,
+                             self.stickman, self.monster, self.door)
 
     def movement_is_true(self, x=0, y=0):
         self.stickman.rect.move_ip(x, y)
         hitting_walls = pygame.sprite.spritecollide(
             self.stickman, self.walls, False)
-        # hitting_monster = pygame.sprite.collide_rect(self.stickman, self.monster)
+        hitting_monster = pygame.sprite.collide_rect(
+            self.stickman, self.monster)
         hitting_door = pygame.sprite.collide_rect(self.stickman, self.door)
         if hitting_door:
             self.stickman_finds_door()
-        # if hitting_monster:
-        #     self.stickman_dies()
-        can_move = not hitting_walls and not hitting_door
+        if hitting_monster:
+            self.stickman_dies()
+        can_move = not hitting_walls and not hitting_door and not hitting_monster
         self.stickman.rect.move_ip(-x, -y)
         return can_move
 
@@ -72,12 +72,12 @@ class Level:
     def stickman_dies(self):
         self.hearts -= 1
 
-    def is_completed(self):
-        if self.score > 0:
-            return True
-
     def game_over(self):
         if self.hearts == 0:
+            return True
+
+    def is_completed(self):
+        if self.score > 0:
             return True
 
     # def monster_movement_is_true(self, x_m=0, y_m=0):
