@@ -11,6 +11,7 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         self.score = 0
         self.hearts = 1
         self.cell_size = cell_size
+        self.level_map = level_map
         self.stickman = None
         self.door = None
         self.monster = None
@@ -42,7 +43,6 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
                 elif cell == 4:
                     self.monster = Monster(n_x, n_y)
                     self.floors.add(Floor(n_x, n_y))
-
         self.all_sprites.add(self.floors, self.walls,
                              self.stickman, self.monster, self.door)
 
@@ -50,14 +50,23 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         self.stickman.rect.move_ip(x, y)
         hitting_walls = pygame.sprite.spritecollide(
             self.stickman, self.walls, False)
-        hitting_monster = pygame.sprite.collide_rect(
-            self.stickman, self.monster)
         hitting_door = pygame.sprite.collide_rect(self.stickman, self.door)
         if hitting_door:
             self.stickman_finds_door()
-        if hitting_monster:
-            self.hearts -= 1
-        can_move = not hitting_walls and not hitting_door and not hitting_monster
+        can_move = not hitting_walls and not hitting_door
+        if self.level_map != [[1, 1, 1, 1, 1, 1, 1, 1],
+                              [1, 0, 0, 1, 0, 0, 3, 1],
+                              [1, 0, 0, 0, 0, 1, 1, 1],
+                              [1, 1, 1, 1, 0, 0, 1, 1],
+                              [1, 0, 0, 0, 1, 0, 0, 1],
+                              [1, 0, 1, 0, 1, 1, 0, 1],
+                              [1, 2, 1, 0, 0, 0, 0, 1],
+                              [1, 1, 1, 1, 1, 1, 1, 1]]:
+            hitting_monster = pygame.sprite.collide_rect(
+                self.stickman, self.monster)
+            if hitting_monster:
+                self.hearts -= 1
+            can_move = not hitting_walls and not hitting_door and not hitting_monster
         self.stickman.rect.move_ip(-x, -y)
         return can_move
 
@@ -86,10 +95,10 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
     #     self.monster.rect.move_ip(-x_m, -y_m)
     #     return can_move
 
-    # def move_monster(self, x_m=0, y_m=0):
+    # def monster_moves(self):
+    #     self.move_monster(x_m=50)
+
+    # def move_monster(self):
     #     if not self.monster_movement_is_true(x_m, y_m):
     #         return
     #     self.monster.rect.move_ip(x_m, y_m)
-
-    # def monster_moves(self):
-    #     self.move_monster(x_m=50)

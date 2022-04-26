@@ -25,9 +25,30 @@ class GameLoop:
                     self.draw_game_over()
 
                 if self.level.is_completed() is True:
-                    self.draw_level_completed()
+                    if self.draw_level_completed() is True:
+                        return True
 
                 self.clock.tick(60)
+
+    def start_2(self):
+        while True:
+            if self.movements() is False:
+                break
+
+            self.render()
+
+            if self.level.stickman_dies() is True:
+                self.draw_game_over()
+
+            if self.level.is_completed() is True:
+                if self.draw_level_completed() is True:
+                    return True
+
+            self.clock.tick(60)
+
+    # def new_level(self):
+    #     if self.draw_level_completed() is True:
+    #         self.start()
 
     def draw_level_completed(self):
         self.level_completed_initialization()
@@ -35,7 +56,9 @@ class GameLoop:
         while self.level_completed_screen_on:
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                    self.level_completed_screen_on = False
+                    return False
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                    return True
                 if event.type == pygame.QUIT:
                     sys.exit()
         if not self.level_completed_screen_on:
