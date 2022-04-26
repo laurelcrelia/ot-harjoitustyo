@@ -6,7 +6,7 @@ start_level = [[1, 1, 1, 1, 1, 1],
                [1, 3, 0, 0, 0, 1],
                [1, 1, 1, 1, 0, 1],
                [1, 0, 0, 0, 0, 1],
-               [1, 2, 1, 1, 1, 1],
+               [1, 2, 1, 4, 1, 1],
                [1, 1, 1, 1, 1, 1]]
 
 size = 50
@@ -39,3 +39,38 @@ class TestLevel(unittest.TestCase):
 
         self.first_level.move_stickman(x=size)
         self.correct_coordinates(stickman, size, size*4)
+
+    def test_moving_through_monster_is_impossible(self):
+        stickman = self.first_level.stickman
+        self.correct_coordinates(stickman, size, size*4)
+
+        self.first_level.move_stickman(y=-size)
+        self.correct_coordinates(stickman, size, size*3)
+
+        self.first_level.move_stickman(x=size)
+        self.correct_coordinates(stickman, size*2, size*3)
+
+        self.first_level.move_stickman(x=size)
+        self.correct_coordinates(stickman, size*3, size*3)
+
+        self.first_level.move_stickman(y=+size)
+        self.correct_coordinates(stickman, size*3, size*3)
+
+    def test_moving_through_door_is_impossible(self):
+        stickman = self.first_level.stickman
+        self.correct_coordinates(stickman, size, size*4)
+
+        self.first_level.move_stickman(y=-size)
+        self.correct_coordinates(stickman, size, size*3)
+
+        self.first_level.move_stickman(x=size*3)
+        self.correct_coordinates(stickman, size*4, size*3)
+
+        self.first_level.move_stickman(y=-size*2)
+        self.correct_coordinates(stickman, size*4, size*1)
+
+        self.first_level.move_stickman(x=-size*2)
+        self.correct_coordinates(stickman, size*2, size*1)
+
+        self.first_level.move_stickman(x=-size)
+        self.correct_coordinates(stickman, size*2, size*1)
