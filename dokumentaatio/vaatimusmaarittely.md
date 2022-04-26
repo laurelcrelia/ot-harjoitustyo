@@ -13,7 +13,7 @@ Pelissä on viisi erilaista näkymää:
 - Hahmon valitseminen
 - Pelin ohjeet
 - Itse pelinäkymä **"tehty"**(pelin ensimmäinen taso)
-- Häviämisnäkymä/pelin läpäisynäkymä **"tehty"**(ensimmäisen tason läpäisynäkymä)
+- Häviämisnäkymä/pelin läpäisynäkymä **"tehty"**
 
 ![Käyttöliittymäluonnos](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittymaluonnos.jpg)
 
@@ -32,13 +32,13 @@ Pelissä on viisi erilaista näkymää:
   - Taso 1 ei sisällä vastustajia 
   - Pelaajan tulee löytää ovi josta pääsee uudelle tasolle
   
-- Tasosta 2 lähtien peliin ilmestyy vastustajia
-  - Vastustajiin osuessa pelaaja menettää yhden elämän
+- Tasosta 2 lähtien peliin ilmestyy vastustajia **"tehty osittain"** (taso 2 on valmiina mutta monsteri ei liiku vielä)
+  - Vastustajiin osuessa pelaaja menettää yhden elämän **"tehty"**
   
 - Peli vaikeutuu taso tasolta
 - Peli päättyy kun pelaaja menettää kaikki elämät
 
-- Pelin päätyttyä aukeaa "Game Over" -näkymä
+- Pelin päätyttyä aukeaa "Game Over" -näkymä **"tehty"**
   - Näkymästä voi siirtyä joko aloittamaan uuden pelin tai sulkemaan pelin
   
 - Uusi peli alkaa aina alusta eli tasolta 1
