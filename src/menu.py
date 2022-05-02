@@ -63,16 +63,3 @@ class MenuView:
             self.exit_button()
             pygame.display.update()
 
-    # def draw(self):
-    #     self.initialize()
-
-    #     while self.menu_screen_on:
-    #         for event in pygame.event.get():
-    #             if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-    #                 self.menu_screen_on = False
-    #             if event.type == pygame.QUIT:
-    #                 sys.exit()
-    #     if not self.menu_screen_on:
-    #         game = GameLoop(self.level, self.screen, self.renderer,
-    #                          self.cell_size, self.clock)
-    #         game.start()

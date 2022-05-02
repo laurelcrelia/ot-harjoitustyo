@@ -46,10 +46,6 @@ class GameLoop:
 
             self.clock.tick(60)
 
-    # def new_level(self):
-    #     if self.draw_level_completed() is True:
-    #         self.start()
-
     def draw_level_completed(self):
         self.level_completed_initialization()
 
@@ -93,17 +89,6 @@ class GameLoop:
     def render(self):
         self.renderer.render()
 
-    # def menu_initialization(self):
-    #     font1 = pygame.font.SysFont("Segoe UI", 50)
-    #     font2 = pygame.font.SysFont("Segoe UI", 30)
-    #     self.screen.fill((169, 169, 169))
-    #     game_title_text = font1.render("Labyrinth", False, (0, 0, 0))
-    #     play_game_text = font2.render(
-    #         "Start by pressing space", False, (205, 38, 38))
-    #     self.screen.blit(game_title_text, (100, 130))
-    #     self.screen.blit(play_game_text, (60, 200))
-    #     pygame.display.update()
-
     def level_completed_initialization(self):
         font1 = pygame.font.SysFont("Segoe UI", 22)
         font2 = pygame.font.SysFont("Segoe UI", 27)
@@ -112,11 +97,8 @@ class GameLoop:
             "Congratulations you passed this level!", False, (0, 0, 0))
         press_space_text = font2.render(
             "Press space for next level", False, (205, 38, 38))
-        # exit_text = font2.render(
-        #     "Exit by pressing esc", False, (205, 38, 38))
         self.screen.blit(level_passed_text, (20, 120))
         self.screen.blit(press_space_text, (45, 170))
-        # self.screen.blit(exit_text, (80, 220))
         pygame.display.update()
 
     def game_over_initialization(self):
