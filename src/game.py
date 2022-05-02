@@ -25,17 +25,23 @@ class Game:
                         [1, 0, 1, 0, 1, 1, 0, 1],
                         [1, 2, 1, 0, 0, 0, 0, 1],
                         [1, 1, 1, 1, 1, 1, 1, 1]]
+        self.list_of_maps = [self.level_1, self.level_2]
+        self.index = 0
+        self.current_level = self.list_of_maps[self.index]
 
         self.screen = pygame.display.set_mode((400, 400))
         pygame.display.set_caption("Labyrinth")
         self.clock = pygame.time.Clock()
         self.clock.tick(60)
 
+    def change_level(self):
+        self.index += 1
+
     def main(self):
         """Luo peliruudukon ja mahdollistaa ruudukossa liikkumisen"""
         pygame.init()
-        level_1 = Level(self.level_1, self.size)
-        level_2 = Level(self.level_2, self.size)
+        level_1 = Level(self.current_level, self.size)
+        level_2 = Level(self.current_level, self.size)
         renderer_1 = Renderer(self.screen, level_1)
         renderer_2 = Renderer(self.screen, level_2)
         menu = MenuView(self.screen)
@@ -44,6 +50,7 @@ class Game:
         game_loop_2 = GameLoop(level_2, self.screen, renderer_2,
                                self.size, self.clock, menu)
         if game_loop_1.start() is True:
+            self.change_level()
             game_loop_2.start_2()
 
 
