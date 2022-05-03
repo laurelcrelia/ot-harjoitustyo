@@ -8,6 +8,8 @@ Pelinäkymässä on käytetty ohjelmoinnin jatkokurssin Sokoban-pelin png-kuvati
 ## Release
 [Release 1](https://github.com/laurelcrelia/ot-harjoitustyo/releases/tag/viikko5)
 
+[Release 2](https://github.com/laurelcrelia/ot-harjoitustyo/releases/tag/viikko6)
+
 
 ## Dokumentaatio:
 
