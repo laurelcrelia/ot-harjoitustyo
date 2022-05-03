@@ -19,4 +19,5 @@
 
 ## Viikko 6
 - Edellisellä viikolla aloitusnäkymän painikkeista vain toinen toimi kerrallaan. Tällä viikolla tämä saatiin korjattua ja nyt molemmat painikkeet toimivat.
+- Pelinäkymässä näkyy pelihahmon jäljellä olevat elämät.
 
