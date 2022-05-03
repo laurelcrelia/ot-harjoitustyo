@@ -16,3 +16,7 @@
 - Testattu että hahmo ei voi liikkua monsterin tai oven läpi
 - Peli päättyy häviöön jos pelihahmo osuu monsteriin
 - Peli alkaa ensimmäisestä tasosta ja sen läpäistyä pääsee toiselle tasolle
+
+## Viikko 6
+- Edellisellä viikolla aloitusnäkymän painikkeista vain toinen toimi kerrallaan. Tällä viikolla tämä saatiin korjattua ja nyt molemmat painikkeet toimivat.
+
