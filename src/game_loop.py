@@ -3,7 +3,25 @@ import pygame
 
 
 class GameLoop:
+    """Luokka kerää muuttujat vaadittaville parametreille."""
+
     def __init__(self, level, screen, renderer, cell_size, clock, menu):
+        """Luokan konstruktori.
+
+        Args:
+            level:
+                Level-luokan instanssi.
+            screen:
+                Pygame-olio joka hallitsee sovelluksen näkymää.
+            renderer:
+                Renderer-luokan instanssi.
+            cell_size:
+                Tasokartan ruudun pikselikoko.
+            clock:
+                Pygame kello.
+            menu:
+                Menu-luokan instanssi.
+        """
         self.level = level
         self.screen = screen
         self.renderer = renderer
@@ -14,7 +32,9 @@ class GameLoop:
         self.game_over_screen_on = True
 
     def start(self):
-        if self.menu.initialize() is False:
+        """Piirtää aloitusnäkymän ja käynnistää silmukan joka vaihtaa näkymää tietyn pelitilanteen mukaan."""
+        self.menu.initialize()
+        if self.menu.check == 1:
             while True:
                 if self.movements() is False:
                     break
@@ -29,6 +49,8 @@ class GameLoop:
                         return True
 
                 self.clock.tick(60)
+        elif self.menu.check == 2:
+            sys.exit()
 
     def start_2(self):
         while True:
@@ -47,6 +69,7 @@ class GameLoop:
             self.clock.tick(60)
 
     def draw_level_completed(self):
+        """Määrittää näkymän siitä kun taso on tullut läpäistyä ja piirtää sen kutsumalla metodia level_completed_initialization."""
         self.level_completed_initialization()
 
         while self.level_completed_screen_on:
@@ -61,6 +84,7 @@ class GameLoop:
             sys.exit()
 
     def draw_game_over(self):
+        """Määrittää näkymän siitä kun peli on päättynyt häviöön ja piirtää sen kutsumalla metodia game_over_initialization."""
         self.game_over_initialization()
 
         while self.game_over_screen_on:
@@ -73,6 +97,7 @@ class GameLoop:
             sys.exit()
 
     def movements(self):
+        """Määrittää pelihahmon liikuttamisen näppäimillä."""
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
@@ -87,9 +112,11 @@ class GameLoop:
                 return False
 
     def render(self):
+        """Kutsuu luokan Renderer metodia "render" joka renderöi pelinäkymän."""
         self.renderer.render()
 
     def level_completed_initialization(self):
+        """Piirtää läpäisynäkymän."""
         font1 = pygame.font.SysFont("Segoe UI", 22)
         font2 = pygame.font.SysFont("Segoe UI", 27)
         self.screen.fill((151, 255, 255))
@@ -102,6 +129,7 @@ class GameLoop:
         pygame.display.update()
 
     def game_over_initialization(self):
+        """Piirtää häviönäkymän."""
         font1 = pygame.font.SysFont("Segoe UI", 35)
         font2 = pygame.font.SysFont("Segoe UI", 27)
         self.screen.fill((151, 255, 255))

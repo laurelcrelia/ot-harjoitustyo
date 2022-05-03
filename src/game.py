@@ -7,6 +7,8 @@ from menu import MenuView
 
 class Game:
     def __init__(self):
+        """Luokan konstruktori. Alustaa pelin käynnistystä varten tarvittavat parametrit.
+        """
         self.size = 50
         self.level_1 = [[1, 1, 1, 1, 1, 1, 1, 1],
                         [1, 0, 0, 1, 0, 0, 3, 1],
@@ -38,7 +40,7 @@ class Game:
         self.index += 1
 
     def main(self):
-        """Luo peliruudukon ja mahdollistaa ruudukossa liikkumisen"""
+        """Luokka käynnistää pygamen ja luo Gameloop-luokan instanssin."""
         pygame.init()
         level_1 = Level(self.current_level, self.size)
         level_2 = Level(self.level_2, self.size)
