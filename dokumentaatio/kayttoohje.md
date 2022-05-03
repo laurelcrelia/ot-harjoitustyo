@@ -25,11 +25,13 @@ Pelin pääset aloittamaan painamalla "Play"-painiketta ja pelin voi sulkea pain
 
 ## Pelin kulku
 
-![taso1](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/pelinakyma_taso1.png)
-
 Pelin tason läpäisee liikuttamalla pelihahmon labyrintin perällä sijaitsevalle ovelle.
 
-* tähän on tulossa kuva tason läpäisynäkymästä
+![taso1](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/pelinakyma_taso1.png)
+
+Tämän jälkeen avautuu näkymä joka ilmoittaa että olet juuri läpäissyt tason. Tästä näkymästä peli jatkuu seuraavalle tasolle painamalla *space*-näppäintä.
+
+![taso1 läpäisty](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/tason_lapaisy.png)
 
 Toisesta tasosta lähtien peliin ilmestyy monsteri jota tulee väistää. Peli päättyy häviööön mikäli pelihahmo osuu monsteriin.
 
