@@ -33,7 +33,11 @@ Tämän jälkeen avautuu näkymä joka ilmoittaa että olet juuri läpäissyt ta
 
 ![taso1 läpäisty](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/tason_lapaisy.png)
 
-Toisesta tasosta lähtien peliin ilmestyy monsteri jota tulee väistää. Peli päättyy häviööön mikäli pelihahmo osuu monsteriin.
+Toisesta tasosta lähtien peliin ilmestyy monsteri jota tulee väistää. 
+
+![taso2](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/taso2.png)
+
+Peli päättyy häviööön mikäli pelihahmo osuu monsteriin.
 
 * tähän on tulossa kuva "game over"-näkymästä
 
