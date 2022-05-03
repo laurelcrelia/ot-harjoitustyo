@@ -20,6 +20,18 @@ class TestLevel(unittest.TestCase):
         self.assertEqual(sprite.rect.x, x)
         self.assertEqual(sprite.rect.y, y)
 
+    def test_monster_coordinates_when_game_starts(self):
+        monster = self.first_level.monster
+        self.correct_coordinates(monster, size*3, size*4)
+
+    def test_stickman_coordinates_when_game_starts(self):
+        stickman = self.first_level.stickman
+        self.correct_coordinates(stickman, size, size*4)
+
+    def test_door_coordinates_when_game_starts(self):
+        door = self.first_level.door
+        self.correct_coordinates(door, size, size)
+
     def test_moving_is_possible(self):
         stickman = self.first_level.stickman
         self.correct_coordinates(stickman, size, size*4)
