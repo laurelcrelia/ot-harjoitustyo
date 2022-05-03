@@ -8,10 +8,8 @@ Sovelluksella on vain yhdenlaista käyttäjätyyppiä sillä kaikilla käyttäji
 
 ## Käyttöliittymäluonnos
 
-Pelissä on viisi erilaista näkymää:
+Pelissä on kolme erilaista näkymää:
 - Aloitusnäkymä/valikko **"tehty"**(alustava versio aloitusnäkymästä)
-- Hahmon valitseminen
-- Pelin ohjeet
 - Itse pelinäkymä **"tehty"**(pelin ensimmäinen taso)
 - Häviämisnäkymä/pelin läpäisynäkymä **"tehty"**
 
