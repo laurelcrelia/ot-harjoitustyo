@@ -41,7 +41,7 @@ class Game:
         """Luo peliruudukon ja mahdollistaa ruudukossa liikkumisen"""
         pygame.init()
         level_1 = Level(self.current_level, self.size)
-        level_2 = Level(self.current_level, self.size)
+        level_2 = Level(self.level_2, self.size)
         renderer_1 = Renderer(self.screen, level_1)
         renderer_2 = Renderer(self.screen, level_2)
         menu = MenuView(self.screen)
