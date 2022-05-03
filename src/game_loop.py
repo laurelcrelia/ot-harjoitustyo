@@ -104,7 +104,7 @@ class GameLoop:
                 if event.key == pygame.K_DOWN:
                     self.level.move_stickman(y=50)
             elif event.type == pygame.QUIT:
-                break
+                sys.exit()
 
     def render(self):
         """Kutsuu luokan Renderer metodia "render" joka renderöi pelinäkymän."""

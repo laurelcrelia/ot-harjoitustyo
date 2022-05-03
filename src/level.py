@@ -97,10 +97,6 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
     #     self.monster.rect.move_ip(-x_m, -y_m)
     #     return can_move
 
-    # def monster_moves(self):
-    #     self.move_monster(x_m=50)
-
-    # def move_monster(self):
+    # def move_monster(self, x_m=0, y_m=0):
     #     if not self.monster_movement_is_true(x_m, y_m):
-    #         return
-    #     self.monster.rect.move_ip(x_m, y_m)
+    #         self.monster.rect.move_ip(x_m, y_m)
