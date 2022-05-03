@@ -35,5 +35,10 @@ Aika: 6h
 
 Mitä tein: Paransin vielä vähän aloitusruudun buttoneita. Sain ruudulle ilmestymään game_over -näkymän kun pelihahmo osuu monsteriin ja kuolee. Laajensin testejä niin että myös monsteri on otettu huomioon. Ensimmäinen release. Sain pelin vaihtamaan toiselle tasolle kun läpäisee ensimmäisen.
 
+### 2.5
+Aika: 1,5h
+
+Mitä tein: Yritin eriyttää pelin eri tasot jotenkin järkevämmin niin että jokaista tasoa ei tarvitse kutsua erikseen vaan olisi esimerkiksi jokin funktio joka hoitaisi tason vaihtamisen kätevämmin jotta pystyisi luoda peliin helpommin uusia tasoja eikä tulisi niin paljon copy-paste -koodia. En saanut vielä tätä visiota toteutettua mutta yritin ainakin vähän edistää.
+
 ## Yhteensä:
-34,5h
+36h
