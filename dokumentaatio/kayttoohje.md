@@ -19,9 +19,9 @@ Lataa uusimman releasen lähdekoodi painamalla *Assets*-osiossa sijaitsevaa *Sou
 
 Pelin käynnistettyä aukeaa aloitusnäkymä:
 
-*tähän on tulossa kuva aloitusnäkymästä
+![aloitusruutu](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/aloitusruutu.png)
 
-Pelin pääset aloittamaan painamalla "Start"-painiketta ja pelin voi sulkea painamalla "Exit"-painiketta.
+Pelin pääset aloittamaan painamalla "Play"-painiketta ja pelin voi sulkea painamalla "Exit"-painiketta.
 
 ## Pelin kulku
 
