@@ -8,7 +8,7 @@ class Renderer:
         """Luokan konstruktori.
 
         Args:
-            display: 
+            display:
                 Pygame-olio joka hallitsee sovelluksen näkymää.
             level:
                 Level-luokan instanssi.

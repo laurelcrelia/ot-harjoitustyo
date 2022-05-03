@@ -28,25 +28,22 @@ class GameLoop:
         self.cell_size = cell_size
         self.clock = clock
         self.menu = menu
-        self.level_completed_screen_on = True
         self.game_over_screen_on = True
 
     def start(self):
-        """Piirtää aloitusnäkymän ja käynnistää silmukan joka vaihtaa näkymää tietyn pelitilanteen mukaan."""
+        """Vaihtaa pelin näkymää tietyn pelitilanteen mukaan."""
         self.menu.initialize()
         if self.menu.check == 1:
             while True:
-                if self.movements() is False:
-                    break
-
+                self.movements()
                 self.render()
 
-                if self.level.stickman_dies() is True:
+                if self.level.hearts == 0:
                     self.draw_game_over()
 
-                if self.level.is_completed() is True:
+                if self.level.score > 0:
                     if self.draw_level_completed() is True:
-                        return True
+                        break
 
                 self.clock.tick(60)
         elif self.menu.check == 2:
@@ -54,37 +51,35 @@ class GameLoop:
 
     def start_2(self):
         while True:
-            if self.movements() is False:
-                break
+            self.movements()
 
             self.render()
 
-            if self.level.stickman_dies() is True:
+            if self.level.hearts == 0:
                 self.draw_game_over()
 
-            if self.level.is_completed() is True:
+            if self.level.score > 0:
                 if self.draw_level_completed() is True:
                     return True
 
             self.clock.tick(60)
 
     def draw_level_completed(self):
-        """Määrittää näkymän siitä kun taso on tullut läpäistyä ja piirtää sen kutsumalla metodia level_completed_initialization."""
+        """Määrittää läpäisynäkymän ja piirtää sen metodilla level_completed_initialization."""
         self.level_completed_initialization()
 
-        while self.level_completed_screen_on:
+        while True:
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                    return False
+                    break
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                     return True
                 if event.type == pygame.QUIT:
                     sys.exit()
-        if not self.level_completed_screen_on:
-            sys.exit()
+        sys.exit()
 
     def draw_game_over(self):
-        """Määrittää näkymän siitä kun peli on päättynyt häviöön ja piirtää sen kutsumalla metodia game_over_initialization."""
+        """Määrittää häviönäkymän ja piirtää sen kutsumalla metodia game_over_initialization."""
         self.game_over_initialization()
 
         while self.game_over_screen_on:
@@ -109,7 +104,7 @@ class GameLoop:
                 if event.key == pygame.K_DOWN:
                     self.level.move_stickman(y=50)
             elif event.type == pygame.QUIT:
-                return False
+                break
 
     def render(self):
         """Kutsuu luokan Renderer metodia "render" joka renderöi pelinäkymän."""

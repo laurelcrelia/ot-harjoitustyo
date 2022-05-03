@@ -65,7 +65,7 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
             self.stickman, self.walls, False)
         hitting_door = pygame.sprite.collide_rect(self.stickman, self.door)
         if hitting_door:
-            self.stickman_finds_door()
+            self.score += 1
         can_move = not hitting_walls and not hitting_door
         if self.level_map != [[1, 1, 1, 1, 1, 1, 1, 1],
                               [1, 0, 0, 1, 0, 0, 3, 1],
@@ -87,17 +87,6 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         if not self.movement_is_true(x, y):
             return
         self.stickman.rect.move_ip(x, y)
-
-    def stickman_finds_door(self):
-        self.score += 1
-
-    def stickman_dies(self):
-        if self.hearts == 0:
-            return True
-
-    def is_completed(self):
-        if self.score > 0:
-            return True
 
     # def monster_movement_is_true(self, x_m=0, y_m=0):
     #     self.monster.rect.move_ip(x_m, y_m)

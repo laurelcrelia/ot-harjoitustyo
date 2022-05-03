@@ -8,7 +8,7 @@ class MenuView:
         """Luokan konstruktori. Luo pelin aloitusnäkymän.
 
         Args:
-            screen: 
+            screen:
                 Elementti joka alustaa ikkunan.
         """
         self.screen = screen

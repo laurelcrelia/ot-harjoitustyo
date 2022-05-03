@@ -51,9 +51,9 @@ class Game:
                                self.size, self.clock, menu)
         game_loop_2 = GameLoop(level_2, self.screen, renderer_2,
                                self.size, self.clock, menu)
-        if game_loop_1.start() is True:
-            self.change_level()
-            game_loop_2.start_2()
+        game_loop_1.start()
+        self.change_level()
+        game_loop_2.start_2()
 
 
 if __name__ == "__main__":
