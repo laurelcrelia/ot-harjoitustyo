@@ -30,8 +30,7 @@ class Game:
         self.list_of_maps = [self.level_1, self.level_2]
         self.index = 0
         self.current_level = self.list_of_maps[self.index]
-
-        self.screen = pygame.display.set_mode((400, 400))
+        self.screen = pygame.display.set_mode((400, 450))
         pygame.display.set_caption("Labyrinth")
         self.clock = pygame.time.Clock()
         self.clock.tick(60)
