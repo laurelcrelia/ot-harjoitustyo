@@ -1,3 +1,12 @@
+# Rakenne
+
+Ohjelman muodostuu pakkauksista assets ja sprites. Assets sisältää png-kuvia muun muassa sprites pakkauksen luokkia varten. Sprites sisältää pelin sisältämien eri olioiden luokat.
+
+
+# Sovelluslogiikka
+Game.py-tiedosto käynnistä pelin luomalla Level- ja Renderer- luokkien instanssit jotka menevät parametreiksi GameLoop-luokkaan. GameLoop-luokasta kutsutaan *start* metodia joka puolestaa kutsuu MenuView-luokan metodia *initialize* määrittämään aloitusnäkymän. GameLoop-luokan *start* metodi vaihtaa näkymää pelin tilanteen perusteella eli kun esimerkiksi pelihahmo kuolee kutsuu se metodia *draw_game_over*.
+
+
 # Luokkakaavio
 
 ```mermaid
