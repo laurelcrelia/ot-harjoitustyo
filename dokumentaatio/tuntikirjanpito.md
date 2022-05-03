@@ -38,7 +38,12 @@ Mitä tein: Paransin vielä vähän aloitusruudun buttoneita. Sain ruudulle ilme
 ### 2.5
 Aika: 1,5h
 
-Mitä tein: Yritin eriyttää pelin eri tasot jotenkin järkevämmin niin että jokaista tasoa ei tarvitse kutsua erikseen vaan olisi esimerkiksi jokin funktio joka hoitaisi tason vaihtamisen kätevämmin jotta pystyisi luoda peliin helpommin uusia tasoja eikä tulisi niin paljon copy-paste -koodia. En saanut vielä tätä visiota toteutettua mutta yritin ainakin vähän edistää.
+Mitä tein: Yritin eriyttää pelin eri tasot jotenkin järkevämmin niin että jokaista tasoa ei tarvitse kutsua erikseen vaan olisi esimerkiksi jokin funktio joka hoitaisi tason vaihtamisen kätevämmin jotta pystyisi luoda peliin helpommin uusia tasoja eikä tulisi niin paljon copy-paste -koodia. En saanut vielä tätä visiota toteutettua mutta keksin ainakin alustavan idean toteutukselle.
+
+### 3.5
+Aika: 6h
+
+Mitä tein: Lisäsin docstring-dokumentoinnin suurimpaan osaan luokista ja metodeista. Tein alustavan käyttöohjeen pelille. Selkeytin koodia niin että pylint virheet vähenivät. Pelin toiminnallisuuteen en vielä ehtinyt tehdä muuta kuin että ratkaisin viime viikolla esiintyneen ongelman jossa aloitusnäkymän buttoneista vain toinen toimi kerrallaan. 
 
 ## Yhteensä:
-36h
+42h
