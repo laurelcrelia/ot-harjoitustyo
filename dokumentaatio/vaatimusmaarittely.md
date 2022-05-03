@@ -13,6 +13,7 @@ Pelissä on kolme erilaista näkymää:
 - Itse pelinäkymä **"tehty"**(pelin ensimmäinen taso)
 - Häviämisnäkymä/pelin läpäisynäkymä **"tehty"**
 
+Alla kuva käyttöliittymäluonnoksesta joka on tehty projektin hyvin varhaisessa suunnitteluvaiheessa. Käyttöliittymäluonnoksessa on esitetty perusominaisuuksien lisäksi myös jatkokehitysideoita kuten esimerkiksi hahmon valitsemiseen sekä pelin säännöille luotu näkymä.
 ![Käyttöliittymäluonnos](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittymaluonnos.jpg)
 
 ## Suunnitellut toiminnallisuudet perusversiolle:
@@ -40,6 +41,7 @@ Pelissä on kolme erilaista näkymää:
 
 ## Mahdolliset suunnitelmat jatkokehitykselle:
 
+- Aloitusnäkymästä voi siirtyä "peliohjeet"-osioon jossa selitetään pelin säännöt
 - Ennen pelin alkamista käyttäjä voi valita itselleen pelihahmon
   - Jos käyttäjä ei muuta pelihahmoa pelaa hän automaattisesti oletushahmolla
   - Eri hahmojen ominaisuudet eivät muutu, vain hahmojen ulkonäöllä on eroja
