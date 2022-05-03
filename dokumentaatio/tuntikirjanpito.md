@@ -41,9 +41,9 @@ Aika: 1,5h
 Mitä tein: Yritin eriyttää pelin eri tasot jotenkin järkevämmin niin että jokaista tasoa ei tarvitse kutsua erikseen vaan olisi esimerkiksi jokin funktio joka hoitaisi tason vaihtamisen kätevämmin jotta pystyisi luoda peliin helpommin uusia tasoja eikä tulisi niin paljon copy-paste -koodia. En saanut vielä tätä visiota toteutettua mutta keksin ainakin alustavan idean toteutukselle.
 
 ### 3.5
-Aika: 6h
+Aika: 7h
 
-Mitä tein: Lisäsin docstring-dokumentoinnin suurimpaan osaan luokista ja metodeista. Tein alustavan käyttöohjeen pelille. Selkeytin koodia niin että pylint virheet vähenivät. Pelin toiminnallisuuteen en vielä ehtinyt tehdä muuta kuin että ratkaisin viime viikolla esiintyneen ongelman jossa aloitusnäkymän buttoneista vain toinen toimi kerrallaan. 
+Mitä tein: Lisäsin docstring-dokumentoinnin suurimpaan osaan luokista ja metodeista. Tein alustavan käyttöohjeen pelille. Selkeytin koodia niin että pylint virheet vähenivät. Pelin toiminnallisuuteen en vielä ehtinyt tehdä muuta kuin että ratkaisin viime viikolla esiintyneen ongelman jossa aloitusnäkymän buttoneista vain toinen toimi kerrallaan. Lisäsin vielä lopuksi pelinäkymään alakulmaan näkymään pelihahmon jäljellä olevat elämät. Tässä vaiheessa tasoja on edelleen vasta kaksi ja tasot ovat todella helppoja sillä monsteri ei vielä liiku joten pelaajalla on vain yksi elämä käytössä.
 
 ## Yhteensä:
-42h
+43h
