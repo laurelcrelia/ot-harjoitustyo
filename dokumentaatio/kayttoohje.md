@@ -39,7 +39,7 @@ Toisesta tasosta lähtien peliin ilmestyy monsteri jota tulee väistää.
 
 Peli päättyy häviööön mikäli pelihahmo osuu monsteriin.
 
-* tähän on tulossa kuva "game over"-näkymästä
+![häviönäkymä](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/havionakyma.png)
 
 Mikäli pelaaja läpäisee kaikki pelin tasot ilmestyy ruudulle pelin lopetusnäkymä.
 
