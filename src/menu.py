@@ -2,7 +2,7 @@ import pygame
 
 
 class MenuView:
-    """Pelin alkoitusnäkymästä vastaava luokka."""
+    """Pelin aloitusnäkymästä vastaava luokka."""
 
     def __init__(self, screen):
         """Luokan konstruktori. Luo pelin aloitusnäkymän.
@@ -12,7 +12,7 @@ class MenuView:
                 Elementti joka alustaa ikkunan.
         """
         self.screen = screen
-        self.check = 0
+        self.button_check = 0
 
     def play_button(self):
         """Määrittää "play"-painikkeen toiminnan."""
@@ -27,7 +27,7 @@ class MenuView:
                 pygame.quit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
-                    self.check += 1
+                    self.button_check += 1
         if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
             pygame.draw.rect(self.screen, (190, 190, 190),
                              [width-10, height-5, 80, 40])
@@ -50,7 +50,7 @@ class MenuView:
                 pygame.quit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
-                    self.check += 2
+                    self.button_check += 2
         if width-10 <= mouse[0] <= width+70 and height-5 <= mouse[1] <= height+35:
             pygame.draw.rect(self.screen, (190, 190, 190),
                              [width-10, height-5, 80, 40])
@@ -81,7 +81,7 @@ class MenuView:
 
     def initialize(self):
         """Määrittää aloitusnäkymän ja tarkistaa painikkeiden tilan."""
-        while self.check == 0:
+        while self.button_check == 0:
             self.initialize_game_title()
             self.initialize_play_button()
             self.initialize_exit_button()

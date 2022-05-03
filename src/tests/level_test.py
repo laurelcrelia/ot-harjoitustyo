@@ -74,3 +74,31 @@ class TestLevel(unittest.TestCase):
 
         self.first_level.move_stickman(x=-size)
         self.correct_coordinates(stickman, size*2, size*1)
+
+    def correct_amount_of_hearts(self, hearts, amount):
+        self.assertEqual(hearts, amount)
+
+    def test_stickman_dies(self):
+        stickman = self.first_level.stickman
+        amount_of_hearts = self.first_level.hearts
+        
+        self.correct_coordinates(stickman, size, size*4)
+
+        self.first_level.move_stickman(y=-size)
+        self.correct_amount_of_hearts(amount_of_hearts, 1)
+        self.correct_coordinates(stickman, size, size*3)
+
+        self.first_level.move_stickman(x=size)
+        self.correct_amount_of_hearts(amount_of_hearts, 1)
+
+        self.first_level.move_stickman(x=size)
+        self.correct_amount_of_hearts(amount_of_hearts, 1)
+
+        self.first_level.move_stickman(y=size)
+        self.correct_amount_of_hearts(amount_of_hearts, 1)
+        self.correct_coordinates(stickman, size*3, size*3)
+
+        self.first_level.move_stickman(y=size)
+        self.correct_amount_of_hearts(amount_of_hearts, 1)
+        self.correct_coordinates(stickman, size*3, size*3)
+        

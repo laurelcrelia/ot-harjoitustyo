@@ -33,7 +33,7 @@ class GameLoop:
     def start(self):
         """Vaihtaa pelin näkymää tietyn pelitilanteen mukaan."""
         self.menu.initialize()
-        if self.menu.check == 1:
+        if self.menu.button_check == 1:
             while True:
                 self.movements()
                 self.render()
@@ -46,7 +46,7 @@ class GameLoop:
                         break
 
                 self.clock.tick(60)
-        elif self.menu.check == 2:
+        elif self.menu.button_check == 2:
             sys.exit()
 
     def start_2(self):
