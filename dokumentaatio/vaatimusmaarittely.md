@@ -19,12 +19,8 @@ Pelissä on viisi erilaista näkymää:
 
 ## Suunnitellut toiminnallisuudet perusversiolle:
 
-- Aluksi aukeaa valikkonäkymä
-  - Valikosta voi siirtyä pelin sääntöihin, pelin aloitukseen tai vaihtamaan pelihahmon
-  
-- Ennen pelin alkamista käyttäjä voi valita itselleen pelihahmon
-  - Jos käyttäjä ei muuta pelihahmoa pelaa hän automaattisesti oletushahmolla
-  - Eri hahmojen ominaisuudet eivät muutu, vain hahmojen ulkonäöllä on eroja
+- Aluksi aukeaa valikkonäkymä **"tehty"**
+  - Valikosta voi siirtyä pelin aloitukseen tai poistua pelistä
   
 - Pelaajalla on aluksi 3 elämää
 
@@ -46,6 +42,9 @@ Pelissä on viisi erilaista näkymää:
 
 ## Mahdolliset suunnitelmat jatkokehitykselle:
 
+- Ennen pelin alkamista käyttäjä voi valita itselleen pelihahmon
+  - Jos käyttäjä ei muuta pelihahmoa pelaa hän automaattisesti oletushahmolla
+  - Eri hahmojen ominaisuudet eivät muutu, vain hahmojen ulkonäöllä on eroja
 - Käyttäjä voi luoda käyttäjätunnuksen järjestelmään
   - Käyttäjätunnuksen tulee olla vähintään 2 merkkiä pitkä
   - Vain vapaana olevat käyttäjätunnukset sallitaan
