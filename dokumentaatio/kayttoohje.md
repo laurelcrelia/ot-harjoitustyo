@@ -25,7 +25,7 @@ Pelin pääset aloittamaan painamalla "Play"-painiketta ja pelin voi sulkea pain
 
 ## Pelin kulku
 
-*tähän on tulossa kuva pelinäkymästä
+![taso1](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/pelinakyma_taso1.png)
 
 Pelin tason läpäisee liikuttamalla pelihahmon labyrintin perällä sijaitsevalle ovelle.
 
