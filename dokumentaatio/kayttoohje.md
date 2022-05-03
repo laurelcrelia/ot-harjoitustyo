@@ -41,9 +41,7 @@ Peli päättyy häviööön mikäli pelihahmo osuu monsteriin.
 
 ![häviönäkymä](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/havionakyma.png)
 
-Mikäli pelaaja läpäisee kaikki pelin tasot ilmestyy ruudulle pelin lopetusnäkymä.
+Mikäli pelaaja läpäisee kaikki pelin tasot ilmestyy ruudulle taas normaalisti tason läpäisynäkymä.
 
-* tähän on tulossa kuva pelin läpäisynäkymästä
-
-Peliruudusta voi poistua painamalla sovellusruudun yläkulmassa sijaitsevaa raksia.
+Nyt peliruudusta voi poistua joko painamalla *space*-näppäintä tai sovellusruudun yläkulmassa sijaitsevaa raksia.
    
