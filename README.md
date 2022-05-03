@@ -11,6 +11,8 @@ Pelinäkymässä on käytetty ohjelmoinnin jatkokurssin Sokoban-pelin png-kuvati
 
 ## Dokumentaatio:
 
+[Käyttöohje](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [Vaatimusmäärittely](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
