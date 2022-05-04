@@ -21,7 +21,7 @@ Alla kuva käyttöliittymäluonnoksesta joka on tehty projektin hyvin varhaisess
 - Aluksi aukeaa valikkonäkymä **"tehty"**
   - Valikosta voi siirtyä pelin aloitukseen tai poistua pelistä
   
-- Pelaajalla on aluksi 3 elämää
+- Pelaajalla on aluksi 3 elämää **"tehty osittain"** (tällä hetkellä vain 1 elämä pelin aluksi. Kunhan saan vielä lisättyä uusia tasoja niin lisään peliin useampia elämiä)
 
 - Peli alkaa tasosta 1 joka on ns harjoittelukierros **"tehty"**
   - Taso 1 ei sisällä vastustajia 
