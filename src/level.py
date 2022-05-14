@@ -4,6 +4,7 @@ from sprites.wall import Wall
 from sprites.floor import Floor
 from sprites.door import Door
 from sprites.monster import Monster
+from levels import LEVELS
 
 
 class Level:  # pylint: disable=too-many-instance-attributes # all these instance attributes are necessary
@@ -49,14 +50,7 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
                     self.y_monsters.add(Monster(n_x, n_y))
                     self.floors.add(Floor(n_x, n_y))
 
-        if self.level_map == [[1, 1, 1, 1, 1, 1, 1, 1],
-                              [1, 0, 0, 1, 0, 0, 3, 1],
-                              [1, 0, 0, 0, 0, 1, 1, 1],
-                              [1, 1, 1, 1, 0, 0, 1, 1],
-                              [1, 0, 0, 0, 1, 0, 0, 1],
-                              [1, 0, 1, 0, 1, 1, 0, 1],
-                              [1, 2, 1, 0, 0, 0, 0, 1],
-                              [1, 1, 1, 1, 1, 1, 1, 1]]:
+        if self.level_map == LEVELS[0]:
             self.all_sprites.add(self.floors, self.walls,
                                  self.stickman, self.door)
         else:
@@ -71,21 +65,15 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         if hitting_door:
             self.score += 1
         can_move = not hitting_walls and not hitting_door
-        if self.level_map != [[1, 1, 1, 1, 1, 1, 1, 1],
-                              [1, 0, 0, 1, 0, 0, 3, 1],
-                              [1, 0, 0, 0, 0, 1, 1, 1],
-                              [1, 1, 1, 1, 0, 0, 1, 1],
-                              [1, 0, 0, 0, 1, 0, 0, 1],
-                              [1, 0, 1, 0, 1, 1, 0, 1],
-                              [1, 2, 1, 0, 0, 0, 0, 1],
-                              [1, 1, 1, 1, 1, 1, 1, 1]]:
+        if self.level_map != LEVELS[0]:
             hitting_x_monsters = pygame.sprite.spritecollide(
                 self.stickman, self.x_monsters, False)
             hitting_y_monsters = pygame.sprite.spritecollide(
                 self.stickman, self.y_monsters, False)
-            if hitting_x_monsters or hitting_y_monsters:
+            hitting_monsters = hitting_x_monsters or hitting_y_monsters
+            if hitting_monsters:
                 self.hearts -= 1
-            can_move = not hitting_walls and not hitting_door and not hitting_x_monsters and not hitting_y_monsters
+            can_move = not hitting_walls and not hitting_door and not hitting_monsters
         self.stickman.rect.move_ip(-x, -y)
         return can_move
 
@@ -93,14 +81,6 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         if not self.movement_is_true(x, y):
             return
         self.stickman.rect.move_ip(x, y)
-
-    # def monster_movement_is_true(self):
-    #     for monster in self.monsters:
-    #         hitting_walls = pygame.sprite.spritecollide(
-    #         monster, self.walls, False)
-    #         hitting_door = pygame.sprite.collide_rect(monster, self.door)
-    #         can_move = not hitting_walls and not hitting_door
-    #         return can_move
 
     def move_x_monsters(self):
         for monster in self.x_monsters:
