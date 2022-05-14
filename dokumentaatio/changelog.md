@@ -21,3 +21,6 @@
 - Edellisellä viikolla aloitusnäkymän painikkeista vain toinen toimi kerrallaan. Tällä viikolla tämä saatiin korjattua ja nyt molemmat painikkeet toimivat.
 - Pelinäkymässä näkyy pelihahmon jäljellä olevat elämät.
 
+## Viikko 7
+- Pelissä on nyt 4 tasoa. Peli vaikeutuu jokaisella tasolla.
+- Monsterit liikkuvat seinien välissä.
