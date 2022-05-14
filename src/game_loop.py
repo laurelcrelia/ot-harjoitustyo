@@ -93,7 +93,6 @@ class GameLoop:
         if not self.game_over_screen_on:
             sys.exit()
 
-
     def movements(self):
         """Aloittaa monsterin liikkeen ja määrittää pelihahmon liikuttamisen näppäimillä."""
         for event in pygame.event.get():

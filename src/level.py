@@ -56,7 +56,8 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
             self.all_sprites.add(self.floors, self.walls,
                                  self.stickman, self.door)
         else:
-            self.all_sprites.add(self.floors, self.walls, self.monsters, self.stickman, self.door)
+            self.all_sprites.add(self.floors, self.walls,
+                                 self.monsters, self.stickman, self.door)
 
     def movement_is_true(self, x=0, y=0):
         self.stickman.rect.move_ip(x, y)
@@ -75,7 +76,7 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
                               [1, 2, 1, 0, 0, 0, 0, 1],
                               [1, 1, 1, 1, 1, 1, 1, 1]]:
             hitting_monsters = pygame.sprite.spritecollide(
-            self.stickman, self.monsters, False)
+                self.stickman, self.monsters, False)
             if hitting_monsters:
                 self.hearts -= 1
             can_move = not hitting_walls and not hitting_door and not hitting_monsters
@@ -99,9 +100,7 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         for monster in self.monsters:
             monster.update()
             hitting_walls = pygame.sprite.spritecollide(
-            monster, self.walls, False)
+                monster, self.walls, False)
             hitting_door = pygame.sprite.collide_rect(monster, self.door)
             if hitting_walls or hitting_door:
                 monster.vel *= -1
-
-            

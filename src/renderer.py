@@ -1,5 +1,6 @@
 import pygame
 
+
 class Renderer:
     """Ikkunan renderöinnistä vastaava luokka."""
 
