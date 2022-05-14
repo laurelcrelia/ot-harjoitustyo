@@ -14,7 +14,7 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         self.level_map = level_map
         self.stickman = None
         self.door = None
-        self.monster = None
+        self.monsters = pygame.sprite.Group()
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
@@ -42,8 +42,7 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
                     self.door = Door(n_x, n_y)
                     self.floors.add(Floor(n_x, n_y))
                 elif cell == 4:
-                    self.monster = Monster(n_x, n_y)
-                    self.floors.add(Floor(n_x, n_y))
+                    self.monsters.add(Monster(n_x, n_y))
 
         if self.level_map == [[1, 1, 1, 1, 1, 1, 1, 1],
                               [1, 0, 0, 1, 0, 0, 3, 1],
@@ -56,8 +55,7 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
             self.all_sprites.add(self.floors, self.walls,
                                  self.stickman, self.door)
         else:
-            self.all_sprites.add(self.floors, self.walls,
-                                 self.stickman, self.monster, self.door)
+            self.all_sprites.add(self.floors, self.walls, self.monsters, self.stickman, self.door)
 
     def movement_is_true(self, x=0, y=0):
         self.stickman.rect.move_ip(x, y)
@@ -75,11 +73,11 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
                               [1, 0, 1, 0, 1, 1, 0, 1],
                               [1, 2, 1, 0, 0, 0, 0, 1],
                               [1, 1, 1, 1, 1, 1, 1, 1]]:
-            hitting_monster = pygame.sprite.collide_rect(
-                self.stickman, self.monster)
-            if hitting_monster:
+            hitting_monsters = pygame.sprite.spritecollide(
+            self.stickman, self.monsters, False)
+            if hitting_monsters:
                 self.hearts -= 1
-            can_move = not hitting_walls and not hitting_door and not hitting_monster
+            can_move = not hitting_walls and not hitting_door and not hitting_monsters
         self.stickman.rect.move_ip(-x, -y)
         return can_move
 

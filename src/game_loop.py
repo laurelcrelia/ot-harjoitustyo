@@ -31,7 +31,7 @@ class GameLoop:
         self.game_over_screen_on = True
 
     def start(self):
-        """Vaihtaa pelin näkymää tietyn pelitilanteen mukaan."""
+        """Vaihtaa pelin näkymää aloitusvalikosta ja ensimmäiseltä tasolta."""
         self.menu.initialize()
         if self.menu.button_check == 1:
             while True:
@@ -50,6 +50,7 @@ class GameLoop:
             sys.exit()
 
     def start_2(self):
+        """Vaihtaa pelin näkymää tietyn pelitilanteen mukaan."""
         while True:
             self.movements()
 
