@@ -45,5 +45,10 @@ Aika: 7h
 
 Mitä tein: Lisäsin docstring-dokumentoinnin suurimpaan osaan luokista ja metodeista. Tein alustavan käyttöohjeen pelille. Selkeytin koodia niin että pylint virheet vähenivät. Pelin toiminnallisuuteen en vielä ehtinyt tehdä muuta kuin että ratkaisin viime viikolla esiintyneen ongelman jossa aloitusnäkymän buttoneista vain toinen toimi kerrallaan. Lisäsin vielä lopuksi pelinäkymään alakulmaan näkymään pelihahmon jäljellä olevat elämät. Tässä vaiheessa tasoja on edelleen vasta kaksi ja tasot ovat todella helppoja sillä monsteri ei vielä liiku joten pelaajalla on vain yksi elämä käytössä.
 
+### 14.5
+Aika: 8h
+
+Mitä tein: Lisäsin pelin tasot erilliseen tiedostoon. Sain myös tason vaihtumaan järkevämmin ilman että tarvitsee paljon copy-paste-koodia. Lisäksi loin uusia tasoja ja tein monstereista liikkuvia. Nyt pelissä on kahdenlaisia monstereita; sivusuunnassa ja pystysuunnassa liikkuvia. Korjasin vielä pari pylint virhettä ja muokkasin vaatimusmäärittelyn vastaamaan nykytilannetta.
+
 ## Yhteensä:
-43h
+51h
