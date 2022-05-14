@@ -55,7 +55,8 @@ class GameLoop:
             self.movements()
 
             self.render()
-            self.level.move_monsters()
+            self.level.move_x_monsters()
+            self.level.move_y_monsters()
 
             if self.level.hearts == 0:
                 self.draw_game_over()

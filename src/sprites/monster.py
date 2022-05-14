@@ -18,5 +18,8 @@ class Monster(pygame.sprite.Sprite):
 
         self.vel = 2
 
-    def update(self):
+    def update_x(self):
         self.rect.x += self.vel
+
+    def update_y(self):
+        self.rect.y += self.vel
