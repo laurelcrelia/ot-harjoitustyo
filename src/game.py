@@ -11,7 +11,6 @@ class Game:
         """Luokan konstruktori. Alustaa pelin käynnistystä varten tarvittavat parametrit.
         """
         self.size = 50
-        self.screen = pygame.display.set_mode((400, 450))
         pygame.display.set_caption("Labyrinth")
         self.clock = pygame.time.Clock()
         self.clock.tick(60)
@@ -23,14 +22,15 @@ class Game:
         renderer_1 = Renderer(pygame.display.set_mode(
             (SCREEN_X[0], SCREEN_Y[0])), level_1)
         menu = MenuView(pygame.display.set_mode((SCREEN_X[0], SCREEN_Y[0])))
-        game_loop_1 = GameLoop(level_1, pygame.display.set_mode((SCREEN_X[0], SCREEN_Y[0])), renderer_1,
+        screen = pygame.display.set_mode((SCREEN_X[0], SCREEN_Y[0]))
+        game_loop_1 = GameLoop(level_1, screen, renderer_1,
                                self.size, self.clock, menu)
         game_loop_1.start()
         for i in range(1, 5):
+            screen = pygame.display.set_mode((SCREEN_X[i], SCREEN_Y[i]))
             level_2 = Level(LEVELS[i], self.size)
-            renderer_2 = Renderer(pygame.display.set_mode(
-                (SCREEN_X[i], SCREEN_Y[i])), level_2)
-            game_loop_2 = GameLoop(level_2, pygame.display.set_mode((SCREEN_X[i], SCREEN_Y[i])), renderer_2,
+            renderer_2 = Renderer(screen, level_2)
+            game_loop_2 = GameLoop(level_2, screen, renderer_2,
                                    self.size, self.clock, menu)
             game_loop_2.start_2()
 
