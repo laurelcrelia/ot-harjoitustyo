@@ -3,43 +3,42 @@
 ## Sovelluksen tarkoitus:
 
 Sovellus on labyrinttipeli jossa pelaajan tulee väistää vastustajia pysyäkseen elossa ja löytää ovi päästäkseen uudelle tasolle.
-Käyttäjä voi valita itselleen tietyn pelihahmon rajatusta hahmovalikoimasta.
 Sovelluksella on vain yhdenlaista käyttäjätyyppiä sillä kaikilla käyttäjillä on samat oikeudet.
 
 ## Käyttöliittymäluonnos
 
 Pelissä on kolme erilaista näkymää:
-- Aloitusnäkymä/valikko **"tehty"**(alustava versio aloitusnäkymästä)
-- Itse pelinäkymä **"tehty"**(pelin ensimmäinen taso)
-- Häviämisnäkymä/pelin läpäisynäkymä **"tehty"**
+- Aloitusnäkymä/valikko
+- Itse pelinäkymä
+- Häviämisnäkymä/pelin läpäisynäkymä
 
 Alla kuva käyttöliittymäluonnoksesta joka on tehty projektin hyvin varhaisessa suunnitteluvaiheessa. Käyttöliittymäluonnoksessa on esitetty perusominaisuuksien lisäksi myös jatkokehitysideoita kuten esimerkiksi hahmon valitsemiseen sekä pelin säännöille luotu näkymä.
 ![Käyttöliittymäluonnos](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittymaluonnos.jpg)
 
 ## Suunnitellut toiminnallisuudet perusversiolle:
 
-- Aluksi aukeaa valikkonäkymä **"tehty"**
+- Aluksi aukeaa valikkonäkymä
   - Valikosta voi siirtyä pelin aloitukseen tai poistua pelistä
   
-- Pelaajalla on aluksi 3 elämää **"tehty osittain"** (tällä hetkellä vain 1 elämä pelin aluksi. Kunhan saan vielä lisättyä uusia tasoja niin lisään peliin useampia elämiä)
+- Pelaajalla on aluksi 3 elämää
 
-- Peli alkaa tasosta 1 joka on ns harjoittelukierros **"tehty"**
+- Peli alkaa tasosta 1 joka on ns harjoittelukierros
   - Taso 1 ei sisällä vastustajia 
   - Pelaajan tulee löytää ovi josta pääsee uudelle tasolle
   
-- Tasosta 2 lähtien peliin ilmestyy vastustajia **"tehty osittain"** (taso 2 on valmiina mutta monsteri ei liiku vielä)
-  - Vastustajiin osuessa pelaaja menettää yhden elämän **"tehty"**
+- Tasosta 2 lähtien peliin ilmestyy vastustajia
+  - Vastustajiin osuessa pelaaja menettää yhden elämän
   
 - Peli vaikeutuu taso tasolta
-- Peli päättyy kun pelaaja menettää kaikki elämät
+- Peli päättyy kun pelaaja menettää kaikki elämät tai läpäisee kaikki tasot
 
-- Pelin päätyttyä aukeaa "Game Over" -näkymä **"tehty"**
+- Pelin päätyttyä häviöön aukeaa "Game Over" -näkymä
   - Näkymästä voi siirtyä joko aloittamaan uuden pelin tai sulkemaan pelin
   
 - Uusi peli alkaa aina alusta eli tasolta 1
 
 
-## Mahdolliset suunnitelmat jatkokehitykselle:
+## Jatkokehitysideoita:
 
 - Aloitusnäkymästä voi siirtyä "peliohjeet"-osioon jossa selitetään pelin säännöt
 - Ennen pelin alkamista käyttäjä voi valita itselleen pelihahmon
