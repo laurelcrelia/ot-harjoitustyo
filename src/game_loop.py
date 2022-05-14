@@ -55,6 +55,7 @@ class GameLoop:
             self.movements()
 
             self.render()
+            self.level.move_monsters()
 
             if self.level.hearts == 0:
                 self.draw_game_over()
@@ -92,8 +93,9 @@ class GameLoop:
         if not self.game_over_screen_on:
             sys.exit()
 
+
     def movements(self):
-        """Määrittää pelihahmon liikuttamisen näppäimillä."""
+        """Aloittaa monsterin liikkeen ja määrittää pelihahmon liikuttamisen näppäimillä."""
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
