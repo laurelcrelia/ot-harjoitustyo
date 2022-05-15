@@ -50,7 +50,7 @@ Aika: 8h
 
 Mitä tein: Lisäsin pelin tasot erilliseen tiedostoon. Sain myös tason vaihtumaan järkevämmin ilman että tarvitsee paljon copy-paste-koodia. Lisäksi loin uusia tasoja ja tein monstereista liikkuvia. Nyt pelissä on kahdenlaisia monstereita; sivusuunnassa ja pystysuunnassa liikkuvia. Korjasin vielä pari pylint virhettä ja muokkasin vaatimusmäärittelyn vastaamaan nykytilannetta.
 
-###15.5
+### 15.5
 Aika: 4h
 
 Mitä tein: Loin peliruudun alakulmaan näkymän, jossa näkee pelitilanteen mukaisen sydänten määrän sekä tasonumeron. Muokkasin myös pelin käyttöohjeen vastaamaan nykyistä tilannetta.
