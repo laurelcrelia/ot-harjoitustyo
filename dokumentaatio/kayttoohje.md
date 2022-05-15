@@ -43,5 +43,5 @@ Peli päättyy häviööön mikäli pelihahmo osuu monsteriin ja yhtäkään el�
 
 Mikäli pelaaja läpäisee kaikki pelin tasot ilmestyy ruudulle taas normaalisti tason läpäisynäkymä.
 
-Nyt peliruudusta voi poistua joko painamalla *space*-näppäintä tai sovellusruudun yläkulmassa sijaitsevaa raksia.
+Nyt peliruudusta voi poistua joko painamalla *esc*-näppäintä tai sovellusruudun yläkulmassa sijaitsevaa raksia.
    
