@@ -24,3 +24,5 @@
 ## Viikko 7
 - Pelissä on nyt 5 tasoa. Peli vaikeutuu jokaisella tasolla.
 - Monsterit liikkuvat seinien välissä joko x- tai y-tasossa.
+- Peliruudun alakulmassa näkyy pelihahmon elämät, jotka päivittyvät pelitilanteen mukaan.
+- Peliruudun alakulmassa näkyy pelihetken tason numero.
