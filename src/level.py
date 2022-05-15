@@ -8,11 +8,14 @@ from levels import LEVELS
 
 
 class Level:  # pylint: disable=too-many-instance-attributes # all these instance attributes are necessary
-    def __init__(self, level_map, cell_size):
+    def __init__(self, level_map, cell_size, screen_width, display):
         self.score = 0
-        self.hearts = 1
+        self.hearts = 3
         self.cell_size = cell_size
         self.level_map = level_map
+        self.level_number = 1
+        self.screen_width = screen_width
+        self.display = display
         self.stickman = None
         self.door = None
         self.x_monsters = pygame.sprite.Group()
@@ -54,8 +57,8 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
             self.all_sprites.add(self.floors, self.walls,
                                  self.stickman, self.door)
         else:
-            self.all_sprites.add(self.floors, self.walls,
-                                 self.x_monsters, self.y_monsters, self.stickman, self.door)
+            self.all_sprites.add(self.floors, self.walls, self.stickman,
+                                 self.x_monsters, self.y_monsters, self.door)
 
     def movement_is_true(self, x=0, y=0):
         self.stickman.rect.move_ip(x, y)
@@ -64,16 +67,14 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
         hitting_door = pygame.sprite.collide_rect(self.stickman, self.door)
         if hitting_door:
             self.score += 1
+        hitting_x_monsters = pygame.sprite.spritecollide(
+            self.stickman, self.x_monsters, False)
+        hitting_y_monsters = pygame.sprite.spritecollide(
+            self.stickman, self.y_monsters, False)
+        hitting_monsters = hitting_x_monsters or hitting_y_monsters
+        if hitting_monsters:
+            self.hearts -= 1
         can_move = not hitting_walls and not hitting_door
-        if self.level_map != LEVELS[0]:
-            hitting_x_monsters = pygame.sprite.spritecollide(
-                self.stickman, self.x_monsters, False)
-            hitting_y_monsters = pygame.sprite.spritecollide(
-                self.stickman, self.y_monsters, False)
-            hitting_monsters = hitting_x_monsters or hitting_y_monsters
-            if hitting_monsters:
-                self.hearts -= 1
-            can_move = not hitting_walls and not hitting_door and not hitting_monsters
         self.stickman.rect.move_ip(-x, -y)
         return can_move
 
@@ -90,6 +91,10 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
             hitting_door = pygame.sprite.collide_rect(monster, self.door)
             if hitting_walls or hitting_door:
                 monster.vel *= -1
+            hitting_stickman = pygame.sprite.collide_rect(
+                monster, self.stickman)
+            if hitting_stickman:
+                monster.update_x()
 
     def move_y_monsters(self):
         for monster in self.y_monsters:
@@ -99,3 +104,53 @@ class Level:  # pylint: disable=too-many-instance-attributes # all these instanc
             hitting_door = pygame.sprite.collide_rect(monster, self.door)
             if hitting_walls or hitting_door:
                 monster.vel *= -1
+            hitting_stickman = pygame.sprite.collide_rect(
+                monster, self.stickman)
+            if hitting_stickman:
+                monster.update_y()
+
+    def draw_hearts(self):
+        """Piirtää pelinäkymän alakulmaan elämät"""
+        if self.screen_width == 400:
+            self.blit_hearts_if_400()
+        else:
+            self.blit_hearts_if_500()
+
+    def blit_hearts_if_400(self):
+        heart = pygame.image.load("src/assets/heart.png")
+        hearts = pygame.transform.scale(heart, (25, 25))
+        if self.hearts == 3:
+            self.display.blit(hearts, (25, 402))
+            self.display.blit(hearts, (50, 402))
+            self.display.blit(hearts, (75, 402))
+        elif self.hearts == 2:
+            self.display.blit(hearts, (25, 402))
+            self.display.blit(hearts, (50, 402))
+        elif self.hearts == 1:
+            self.display.blit(hearts, (25, 402))
+
+    def blit_hearts_if_500(self):
+        heart = pygame.image.load("src/assets/heart.png")
+        hearts = pygame.transform.scale(heart, (25, 25))
+        if self.hearts == 3:
+            self.display.blit(hearts, (25, 502))
+            self.display.blit(hearts, (50, 502))
+            self.display.blit(hearts, (75, 502))
+        elif self.hearts == 2:
+            self.display.blit(hearts, (25, 502))
+            self.display.blit(hearts, (50, 502))
+        elif self.hearts == 1:
+            self.display.blit(hearts, (25, 502))
+
+    def draw_level_text(self):
+        """Piirtää pelinäkymän alakulmaan meneillään olevan tason"""
+        if self.screen_width == 400:
+            font1 = pygame.font.SysFont("Segoe UI", 27)
+            level_text = font1.render(
+                f"Level {self.level_number}", False, (0, 0, 0))
+            self.display.blit(level_text, (200, 402))
+        else:
+            font1 = pygame.font.SysFont("Segoe UI", 27)
+            level_text = font1.render(
+                f"Level {self.level_number}", False, (0, 0, 0))
+            self.display.blit(level_text, (200, 502))

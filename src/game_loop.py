@@ -21,6 +21,8 @@ class GameLoop:
                 Pygame kello.
             menu:
                 Menu-luokan instanssi.
+            screen_width:
+                Peliruudun leveys.
         """
         self.level = level
         self.screen = screen
