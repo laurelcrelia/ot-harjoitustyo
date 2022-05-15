@@ -53,7 +53,7 @@ Mitä tein: Lisäsin pelin tasot erilliseen tiedostoon. Sain myös tason vaihtum
 ### 15.5
 Aika: 4h
 
-Mitä tein: Loin peliruudun alakulmaan näkymän, jossa näkee pelitilanteen mukaisen sydänten määrän sekä tasonumeron. Muokkasin myös pelin käyttöohjeen vastaamaan nykyistä tilannetta.
+Mitä tein: Loin peliruudun alakulmaan näkymän, jossa näkee pelitilanteen mukaisen sydänten määrän sekä tasonumeron. Muokkasin myös pelin käyttöohjeen vastaamaan nykyistä tilannetta. Yritin myös luoda uusia testejä level-luokkaan liittyen, mutta koin hankaluuksia ja jouduin lopulta poistamaan uudet testit, koska ne eivät menneet läpi.
 
 ## Yhteensä:
 55h
