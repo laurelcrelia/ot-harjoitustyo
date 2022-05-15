@@ -64,13 +64,15 @@ class GameLoop:
                 self.draw_game_over()
 
             if self.level.score > 0:
-                if self.draw_level_completed() is True:
+                if self.level.level_number == 5:
+                    self.draw_game_completed()
+                elif self.draw_level_completed() is True:
                     return True
 
             self.clock.tick(60)
 
     def draw_level_completed(self):
-        """Määrittää läpäisynäkymän ja piirtää sen metodilla level_completed_initialization."""
+        """Määrittää tason läpäisynäkymän ja piirtää sen metodilla level_completed_initialization."""
         self.level_completed_initialization()
 
         while True:
@@ -86,6 +88,19 @@ class GameLoop:
     def draw_game_over(self):
         """Määrittää häviönäkymän ja piirtää sen kutsumalla metodia game_over_initialization."""
         self.game_over_initialization()
+ 
+        while self.game_over_screen_on:
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                    self.game_over_screen_on = False
+                if event.type == pygame.QUIT:
+                    sys.exit()
+        if not self.game_over_screen_on:
+            sys.exit()
+
+    def draw_game_completed(self):
+        """Määrittää pelin läpäisynäkymän ja piirtää sen metodilla game_completed_initialization."""
+        self.game_completed_initialization()
 
         while self.game_over_screen_on:
             for event in pygame.event.get():
@@ -119,7 +134,7 @@ class GameLoop:
         """Piirtää läpäisynäkymän."""
         font1 = pygame.font.SysFont("Segoe UI", 22)
         font2 = pygame.font.SysFont("Segoe UI", 27)
-        self.screen.fill((151, 255, 255))
+        self.screen.fill((220, 220, 220))
         level_passed_text = font1.render(
             "Congratulations you passed this level!", False, (0, 0, 0))
         press_space_text = font2.render(
@@ -139,4 +154,17 @@ class GameLoop:
             "Exit by pressing esc", False, (205, 38, 38))
         self.screen.blit(level_game_over_text, (70, 130))
         self.screen.blit(exit_text, (70, 200))
+        pygame.display.update()
+
+    def game_completed_initialization(self):
+        """Piirtää läpäisynäkymän."""
+        font1 = pygame.font.SysFont("Segoe UI", 40)
+        font2 = pygame.font.SysFont("Segoe UI", 20)
+        self.screen.fill((0, 0, 0))
+        game_passed_text = font1.render(
+            "You are winner!", False, (255, 215, 0))
+        exit_text = font2.render(
+            "Exit by pressing esc", False, (205, 38, 38))
+        self.screen.blit(game_passed_text, (116, 140))
+        self.screen.blit(exit_text, (147, 220))
         pygame.display.update()
