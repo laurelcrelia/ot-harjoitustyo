@@ -88,7 +88,7 @@ class GameLoop:
     def draw_game_over(self):
         """Määrittää häviönäkymän ja piirtää sen kutsumalla metodia game_over_initialization."""
         self.game_over_initialization()
- 
+
         while self.game_over_screen_on:
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:

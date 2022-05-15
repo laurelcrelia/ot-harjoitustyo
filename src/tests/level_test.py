@@ -1,4 +1,5 @@
 import unittest
+import pygame
 
 from level import Level
 
@@ -11,10 +12,13 @@ start_level = [[1, 1, 1, 1, 1, 1],
 
 size = 50
 
+screen_width = 300
+
+display = pygame.display.set_mode((300, 330))
 
 class TestLevel(unittest.TestCase):
     def setUp(self):
-        self.test_level = Level(start_level, size)
+        self.test_level = Level(start_level, size, display, screen_width)
 
     def correct_coordinates(self, sprite, x, y):
         self.assertEqual(sprite.rect.x, x)
