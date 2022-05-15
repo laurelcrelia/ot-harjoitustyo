@@ -8,9 +8,9 @@ Sovelluksella on vain yhdenlaista käyttäjätyyppiä sillä kaikilla käyttäji
 ## Käyttöliittymäluonnos
 
 Pelissä on kolme erilaista näkymää:
-- Aloitusnäkymä/valikko
+- Aloitusnäkymä (valikko)
 - Itse pelinäkymä
-- Häviämisnäkymä/pelin läpäisynäkymä
+- Loppunäkymä jonka ulkonäkö riippuu siitä loppuiko taso häviöön vai voittoon.
 
 Alla kuva käyttöliittymäluonnoksesta joka on tehty projektin hyvin varhaisessa suunnitteluvaiheessa. Käyttöliittymäluonnoksessa on esitetty perusominaisuuksien lisäksi myös jatkokehitysideoita kuten esimerkiksi hahmon valitsemiseen sekä pelin säännöille luotu näkymä.
 ![Käyttöliittymäluonnos](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittymaluonnos.jpg)
@@ -30,12 +30,12 @@ Alla kuva käyttöliittymäluonnoksesta joka on tehty projektin hyvin varhaisess
   - Vastustajiin osuessa pelaaja menettää yhden elämän
   
 - Peli vaikeutuu taso tasolta
+- Pelissä on yhteensä 5 eri tasoa
 - Peli päättyy kun pelaaja menettää kaikki elämät tai läpäisee kaikki tasot
 
 - Pelin päätyttyä häviöön aukeaa "Game Over" -näkymä
   - Näkymästä voi siirtyä joko aloittamaan uuden pelin tai sulkemaan pelin
-  
-- Uusi peli alkaa aina alusta eli tasolta 1
+
 
 
 ## Jatkokehitysideoita:
