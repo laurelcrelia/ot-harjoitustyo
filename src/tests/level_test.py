@@ -47,7 +47,7 @@ class TestLevel(unittest.TestCase):
 
         self.test_level.move_stickman(x=size)
         self.correct_coordinates(stickman, size, size*4)
-        
+
     def test_moving_through_door_is_impossible(self):
         stickman = self.test_level.stickman
         self.correct_coordinates(stickman, size, size*4)
