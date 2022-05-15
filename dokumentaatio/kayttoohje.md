@@ -37,7 +37,7 @@ Toisesta tasosta lähtien peliin ilmestyy monsteri jota tulee väistää.
 
 ![taso2](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/taso2.png)
 
-Peli päättyy häviööön mikäli pelihahmo osuu monsteriin.
+Peli päättyy häviööön mikäli pelihahmo osuu monsteriin ja yhtäkään elämää ei ole enää jäljellä.
 
 ![häviönäkymä](https://github.com/laurelcrelia/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/havionakyma.png)
 
